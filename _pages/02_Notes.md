@@ -14,4 +14,5 @@ title: Vocab
 - String - A series of readable or usable sentences that the user will use
 - len() - Returns the length (the number of items) of an object
 - Return - Used to return from a function (break out of the function)
+
 ---
