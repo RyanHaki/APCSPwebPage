@@ -24,8 +24,8 @@
   
     
         ,"post2": {
-            "title": "An Example Markdown Post",
-            "content": "you are viewing my first post .",
+            "title": "First Blog Post!",
+            "content": "My favorite things to do . Play Videog games | Watch TV | Play games | Eat food | Walk | . . My Goals For This Class . Learn to use VSCode effectively | Improve Python skills | Learn to code as a team | . .",
             "url": "https://ryanhaki.github.io/APCSPwebPage/markdown/2022/08/22/My-First-post.html",
             "relUrl": "/markdown/2022/08/22/My-First-post.html",
             "date": " • Aug 22, 2022"
@@ -60,7 +60,9 @@
   
 
   
-      ,"page1": {
+
+  
+      ,"page2": {
           "title": "About Me",
           "content": "This website is powered by fastpages 1. . a blogging platform that natively supports Jupyter notebooks in addition to other formats. &#8617; . |",
           "url": "https://ryanhaki.github.io/APCSPwebPage/about/",
@@ -92,7 +94,7 @@
   
 
   
-      ,"page10": {
+      ,"page11": {
           "title": "",
           "content": "Sitemap: {{ “sitemap.xml” | absolute_url }} | .",
           "url": "https://ryanhaki.github.io/APCSPwebPage/robots.txt",
