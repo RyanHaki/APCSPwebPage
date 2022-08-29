@@ -106,7 +106,7 @@
   
       ,"page3": {
           "title": "About Me",
-          "content": "Ryan Hakimipour [^1] is a high school student who has created this fastpage as a part of AP Computer Science Principals. .",
+          "content": ". Ryan Hakimipour [^1] is a high school student who has created this fastpage as a part of AP Computer Science Principals. .",
           "url": "https://ryanhaki.github.io/APCSPwebPage/about/",
           "relUrl": "/about/",
           "date": ""
