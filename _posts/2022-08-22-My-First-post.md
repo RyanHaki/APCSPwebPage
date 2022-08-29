@@ -5,9 +5,12 @@ description: My first blog post.
 categories: [markdown]
 title: First Blog Post!
 ---
+
+![]({{ site.baseurl }}/images/new-super-mario-bros-ds-2022.png)
+
 ## My favorite things to do
 
-- Play Videog games
+- Play Video games
 - Watch TV
 - Play games
 - Eat food
