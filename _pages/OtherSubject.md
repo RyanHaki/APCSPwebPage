@@ -22,4 +22,4 @@ World Religions worldwide and percentages of the world population
 |-|-|
 | Buddhism | 6.6% |
 
-![]({{ site.baseurl }}/images/WorldMapReligionSpread.png)
+![]({{ site.baseurl }}/images/NewWorldMapRelegion.png)
