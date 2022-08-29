@@ -94,6 +94,17 @@
 
   
       ,"page2": {
+          "title": "Ap World History",
+          "content": "World Map . . World Religions . World Religions worldwide and percentages of the world population . World Religions Percentage of World Population . Christianity | 31.7% | . Islam | 25% | . Hinduism | 15% | . Buddhism | 6.6% | . .",
+          "url": "https://ryanhaki.github.io/APCSPwebPage/_pages/OtherSubject.html",
+          "relUrl": "/_pages/OtherSubject.html",
+          "date": ""
+      }
+      
+  
+
+  
+      ,"page3": {
           "title": "About Me",
           "content": "Ryan Hakimipour [^1] is a high school student who has created this fastpage as a part of AP Computer Science Principals. .",
           "url": "https://ryanhaki.github.io/APCSPwebPage/about/",
@@ -125,7 +136,7 @@
   
 
   
-      ,"page11": {
+      ,"page12": {
           "title": "",
           "content": "Sitemap: {{ “sitemap.xml” | absolute_url }} | .",
           "url": "https://ryanhaki.github.io/APCSPwebPage/robots.txt",
