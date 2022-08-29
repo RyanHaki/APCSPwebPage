@@ -3,7 +3,7 @@ toc: true
 layout: page
 title: Vocab
 ---
-
+![]({{ site.baseurl }}/images/vocabimage.png)
 ### This year's vocabulary includes:
 - Function - A group of related statements that perform a specific task
 - Def - The command to define a function
