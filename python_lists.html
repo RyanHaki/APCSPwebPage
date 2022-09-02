@@ -1,0 +1,762 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="twitter:card" content="summary_large_image" /><!-- Begin Jekyll SEO tag v2.8.0 -->
+<title>Lists | Ryan Hakimipour</title>
+<meta name="generator" content="Jekyll v4.1.1" />
+<meta property="og:title" content="Lists" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="Ryan Hakimipour’s blog" />
+<meta property="og:description" content="Ryan Hakimipour’s blog" />
+<link rel="canonical" href="https://ryanhaki.github.io/APCSPwebPage/python_lists" />
+<meta property="og:url" content="https://ryanhaki.github.io/APCSPwebPage/python_lists" />
+<meta property="og:site_name" content="Ryan Hakimipour" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2022-08-29T00:00:00-05:00" />
+<meta name="twitter:card" content="summary" />
+<meta property="twitter:title" content="Lists" />
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"BlogPosting","dateModified":"2022-08-29T00:00:00-05:00","datePublished":"2022-08-29T00:00:00-05:00","description":"Ryan Hakimipour’s blog","headline":"Lists","mainEntityOfPage":{"@type":"WebPage","@id":"https://ryanhaki.github.io/APCSPwebPage/python_lists"},"url":"https://ryanhaki.github.io/APCSPwebPage/python_lists"}</script>
+<!-- End Jekyll SEO tag -->
+<link rel="stylesheet" href="/APCSPwebPage/assets/css/style.css"><link type="application/atom+xml" rel="alternate" href="https://ryanhaki.github.io/APCSPwebPage/feed.xml" title="Ryan Hakimipour" /><link rel="shortcut icon" type="image/x-icon" href="/APCSPwebPage/images/favicon.ico"><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Primer/15.2.0/primer.css" integrity="sha512-xTz2ys4coGAOz8vuV1NcQBkgVmKhsSEtjbqyMJbBHRplFuvKIUo6xhLHpAyPt9mfR6twHJgn9OgVLuqOvjeBhg==" crossorigin="anonymous" />
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css" integrity="sha512-1PKOgIY59xJ8Co8+NE6FZ+LOAZKjy+KY8iq0G4B3CyeY6wYHN3yt9PW0XpSriVlkMXe40PTKnXrLnZ9+fkDaog==" crossorigin="anonymous" />
+
+<script>
+function wrap_img(fn) {
+    if (document.attachEvent ? document.readyState === "complete" : document.readyState !== "loading") {
+        var elements = document.querySelectorAll(".post img");
+        Array.prototype.forEach.call(elements, function(el, i) {
+            if (el.getAttribute("title") && (el.className != "emoji")) {
+                const caption = document.createElement('figcaption');
+                var node = document.createTextNode(el.getAttribute("title"));
+                caption.appendChild(node);
+                const wrapper = document.createElement('figure');
+                wrapper.className = 'image';
+                el.parentNode.insertBefore(wrapper, el);
+                el.parentNode.removeChild(el);
+                wrapper.appendChild(el);
+                wrapper.appendChild(caption);
+            }
+        });
+    } else { document.addEventListener('DOMContentLoaded', fn); }
+}
+window.onload = wrap_img;
+</script>
+
+<script>
+    document.addEventListener("DOMContentLoaded", function(){
+    // add link icon to anchor tags
+    var elem = document.querySelectorAll(".anchor-link")
+    elem.forEach(e => (e.innerHTML = '<i class="fas fa-link fa-xs"></i>'));
+    });
+</script>
+</head>
+<body><header class="site-header">
+
+  <div class="wrapper"><a class="site-title" rel="author" href="/APCSPwebPage/">Ryan Hakimipour</a><nav class="site-nav">
+        <input type="checkbox" id="nav-trigger" class="nav-trigger" />
+        <label for="nav-trigger">
+          <span class="menu-icon">
+            <svg viewBox="0 0 18 15" width="18px" height="15px">
+              <path d="M18,1.484c0,0.82-0.665,1.484-1.484,1.484H1.484C0.665,2.969,0,2.304,0,1.484l0,0C0,0.665,0.665,0,1.484,0 h15.032C17.335,0,18,0.665,18,1.484L18,1.484z M18,7.516C18,8.335,17.335,9,16.516,9H1.484C0.665,9,0,8.335,0,7.516l0,0 c0-0.82,0.665-1.484,1.484-1.484h15.032C17.335,6.031,18,6.696,18,7.516L18,7.516z M18,13.516C18,14.335,17.335,15,16.516,15H1.484 C0.665,15,0,14.335,0,13.516l0,0c0-0.82,0.665-1.483,1.484-1.483h15.032C17.335,12.031,18,12.695,18,13.516L18,13.516z"/>
+            </svg>
+          </span>
+        </label>
+
+        <div class="trigger"><a class="page-link" href="/APCSPwebPage/_pages/02_Notes.html">Vocab</a><a class="page-link" href="/APCSPwebPage/_pages/OtherSubject.html">Ap World History</a><a class="page-link" href="/APCSPwebPage/about/">About Me</a><a class="page-link" href="/APCSPwebPage/Notes/">Notes</a><a class="page-link" href="/APCSPwebPage/search/">Search</a><a class="page-link" href="/APCSPwebPage/categories/">Tags</a></div>
+      </nav></div>
+</header>
+<main class="page-content" aria-label="Content">
+      <div class="wrapper">
+        <article class="post h-entry" itemscope itemtype="http://schema.org/BlogPosting">
+
+  <header class="post-header">
+    <h1 class="post-title p-name" itemprop="name headline">Lists</h1><p class="post-meta post-meta-title"><time class="dt-published" datetime="2022-08-29T00:00:00-05:00" itemprop="datePublished">
+        Aug 29, 2022
+      </time>
+       • <span class="read-time" title="Estimated read time">
+    
+    
+      11 min read
+    
+</span></p>
+
+    
+      <p class="category-tags"><i class="fas fa-tags category-tags-icon"></i></i> 
+      
+        <a class="category-tags-link" href="/APCSPwebPage/categories/#collegeboard">collegeboard</a>
+        
+      
+      </p>
+    
+
+    
+      
+        <div class="pb-5 d-flex flex-justify-center">
+          <div class="px-2">
+
+    <a href="https://github.com/RyanHaki/APCSPwebPage/tree/master/_notebooks/2022-08-29-python_lists.ipynb" role="button" target="_blank">
+<img class="notebook-badge-image" src="/APCSPwebPage/assets/badges/github.svg" alt="View On GitHub">
+    </a>
+</div>
+
+          <div class="px-2">
+    <a href="https://mybinder.org/v2/gh/RyanHaki/APCSPwebPage/master?filepath=_notebooks%2F2022-08-29-python_lists.ipynb" target="_blank">
+        <img class="notebook-badge-image" src="/APCSPwebPage/assets/badges/binder.svg" alt="Open In Binder"/>
+    </a>
+</div>
+
+          <div class="px-2">
+    <a href="https://colab.research.google.com/github/RyanHaki/APCSPwebPage/blob/master/_notebooks/2022-08-29-python_lists.ipynb" target="_blank">
+        <img class="notebook-badge-image" src="/APCSPwebPage/assets/badges/colab.svg" alt="Open In Colab"/>
+    </a>
+</div>
+          <div class="px-2">
+  <a href="https://deepnote.com/launch?url=https%3A%2F%2Fgithub.com%2FRyanHaki%2FAPCSPwebPage%2Fblob%2Fmaster%2F_notebooks%2F2022-08-29-python_lists.ipynb" target="_blank">
+      <img class="notebook-badge-image" src="/APCSPwebPage/assets/badges/deepnote.svg" alt="Launch in Deepnote"/>
+  </a>
+</div>
+
+        </div>
+      </header>
+
+  <div class="post-content e-content" itemprop="articleBody">
+    <ul id="toc" class="section-nav">
+</ul><!--
+#################################################
+### THIS FILE WAS AUTOGENERATED! DO NOT EDIT! ###
+#################################################
+# file to edit: _notebooks/2022-08-29-python_lists.ipynb
+-->
+
+<div class="container" id="notebook-container">
+        
+    
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="p">{</span>
+ <span class="s2">"cells"</span><span class="p">:</span> <span class="p">[</span>
+  <span class="p">{</span>
+   <span class="s2">"cell_type"</span><span class="p">:</span> <span class="s2">"markdown"</span><span class="p">,</span>
+   <span class="s2">"metadata"</span><span class="p">:</span> <span class="p">{},</span>
+   <span class="s2">"source"</span><span class="p">:</span> <span class="p">[</span>
+    <span class="s2">"# Python Lists and Dictionaries Post</span><span class="se">\n</span><span class="s2">"</span><span class="p">,</span>
+    <span class="s2">"&gt; Using lists and dictionaries in python code.</span><span class="se">\n</span><span class="s2">"</span><span class="p">,</span>
+    <span class="s2">"</span><span class="se">\n</span><span class="s2">"</span><span class="p">,</span>
+    <span class="s2">"- toc: true </span><span class="se">\n</span><span class="s2">"</span><span class="p">,</span>
+    <span class="s2">"- badges: true</span><span class="se">\n</span><span class="s2">"</span><span class="p">,</span>
+    <span class="s2">"- comments: true</span><span class="se">\n</span><span class="s2">"</span><span class="p">,</span>
+    <span class="s2">"- categories: [jupyter, Week 2]"</span>
+   <span class="p">]</span>
+  <span class="p">},</span>
+  <span class="p">{</span>
+   <span class="s2">"cell_type"</span><span class="p">:</span> <span class="s2">"markdown"</span><span class="p">,</span>
+   <span class="s2">"metadata"</span><span class="p">:</span> <span class="p">{},</span>
+   <span class="s2">"source"</span><span class="p">:</span> <span class="p">[</span>
+    <span class="s2">"## InfoDb</span><span class="se">\n</span><span class="s2">"</span><span class="p">,</span>
+    <span class="s2">"</span><span class="se">\n</span><span class="s2">"</span><span class="p">,</span>
+    <span class="s2">"InfoDb is a dictionary inside of a list. Here is an example code using InfoDb:"</span>
+   <span class="p">]</span>
+  <span class="p">},</span>
+  <span class="p">{</span>
+   <span class="s2">"cell_type"</span><span class="p">:</span> <span class="s2">"code"</span><span class="p">,</span>
+   <span class="s2">"execution_count"</span><span class="p">:</span> <span class="mi">2</span><span class="p">,</span>
+   <span class="s2">"metadata"</span><span class="p">:</span> <span class="p">{},</span>
+   <span class="s2">"outputs"</span><span class="p">:</span> <span class="p">[</span>
+    <span class="p">{</span>
+     <span class="s2">"name"</span><span class="p">:</span> <span class="s2">"stdout"</span><span class="p">,</span>
+     <span class="s2">"output_type"</span><span class="p">:</span> <span class="s2">"stream"</span><span class="p">,</span>
+     <span class="s2">"text"</span><span class="p">:</span> <span class="p">[</span>
+      <span class="s2">"[{'FirstName': 'John', 'LastName': 'Mortensen', 'DOB': 'October 21', 'Residence': 'San Diego', 'Email': 'jmortensen@powayusd.com', 'Owns_Cars': ['2015-Fusion', '2011-Ranger', '2003-Excursion', '1997-F350', '1969-Cadillac']}, {'FirstName': 'Sunny', 'LastName': 'Naidu', 'DOB': 'August 2', 'Residence': 'Temecula', 'Email': 'snaidu@powayusd.com', 'Owns_Cars': ['4Runner']}, {'FirstName': 'Ryan', 'LastName': 'Hakimipour', 'DOB': 'June 15', 'Residence': 'San Diego', 'Email': 'hakimipourryan@gmail.com', 'Owns_Cars': ['None']}]</span><span class="se">\n</span><span class="s2">"</span>
+     <span class="p">]</span>
+    <span class="p">}</span>
+   <span class="p">],</span>
+   <span class="s2">"source"</span><span class="p">:</span> <span class="p">[</span>
+    <span class="s2">"# Define an empty List called InfoDb</span><span class="se">\n</span><span class="s2">"</span><span class="p">,</span>
+    <span class="s2">"InfoDb = []</span><span class="se">\n</span><span class="s2">"</span><span class="p">,</span>
+    <span class="s2">"</span><span class="se">\n</span><span class="s2">"</span><span class="p">,</span>
+    <span class="s2">"# Append to List a Dictionary of key/values related to a person and cars</span><span class="se">\n</span><span class="s2">"</span><span class="p">,</span>
+    <span class="s2">"InfoDb.append({</span><span class="se">\n</span><span class="s2">"</span><span class="p">,</span>
+    <span class="s2">"    </span><span class="se">\"</span><span class="s2">FirstName</span><span class="se">\"</span><span class="s2">: </span><span class="se">\"</span><span class="s2">John</span><span class="se">\"</span><span class="s2">,</span><span class="se">\n</span><span class="s2">"</span><span class="p">,</span>
+    <span class="s2">"    </span><span class="se">\"</span><span class="s2">LastName</span><span class="se">\"</span><span class="s2">: </span><span class="se">\"</span><span class="s2">Mortensen</span><span class="se">\"</span><span class="s2">,</span><span class="se">\n</span><span class="s2">"</span><span class="p">,</span>
+    <span class="s2">"    </span><span class="se">\"</span><span class="s2">DOB</span><span class="se">\"</span><span class="s2">: </span><span class="se">\"</span><span class="s2">October 21</span><span class="se">\"</span><span class="s2">,</span><span class="se">\n</span><span class="s2">"</span><span class="p">,</span>
+    <span class="s2">"    </span><span class="se">\"</span><span class="s2">Residence</span><span class="se">\"</span><span class="s2">: </span><span class="se">\"</span><span class="s2">San Diego</span><span class="se">\"</span><span class="s2">,</span><span class="se">\n</span><span class="s2">"</span><span class="p">,</span>
+    <span class="s2">"    </span><span class="se">\"</span><span class="s2">Email</span><span class="se">\"</span><span class="s2">: </span><span class="se">\"</span><span class="s2">jmortensen@powayusd.com</span><span class="se">\"</span><span class="s2">,</span><span class="se">\n</span><span class="s2">"</span><span class="p">,</span>
+    <span class="s2">"    </span><span class="se">\"</span><span class="s2">Owns_Cars</span><span class="se">\"</span><span class="s2">: [</span><span class="se">\"</span><span class="s2">2015-Fusion</span><span class="se">\"</span><span class="s2">, </span><span class="se">\"</span><span class="s2">2011-Ranger</span><span class="se">\"</span><span class="s2">, </span><span class="se">\"</span><span class="s2">2003-Excursion</span><span class="se">\"</span><span class="s2">, </span><span class="se">\"</span><span class="s2">1997-F350</span><span class="se">\"</span><span class="s2">, </span><span class="se">\"</span><span class="s2">1969-Cadillac</span><span class="se">\"</span><span class="s2">]</span><span class="se">\n</span><span class="s2">"</span><span class="p">,</span>
+    <span class="s2">"})</span><span class="se">\n</span><span class="s2">"</span><span class="p">,</span>
+    <span class="s2">"</span><span class="se">\n</span><span class="s2">"</span><span class="p">,</span>
+    <span class="s2">"# Append to List a 2nd Dictionary of key/values</span><span class="se">\n</span><span class="s2">"</span><span class="p">,</span>
+    <span class="s2">"InfoDb.append({</span><span class="se">\n</span><span class="s2">"</span><span class="p">,</span>
+    <span class="s2">"    </span><span class="se">\"</span><span class="s2">FirstName</span><span class="se">\"</span><span class="s2">: </span><span class="se">\"</span><span class="s2">Sunny</span><span class="se">\"</span><span class="s2">,</span><span class="se">\n</span><span class="s2">"</span><span class="p">,</span>
+    <span class="s2">"    </span><span class="se">\"</span><span class="s2">LastName</span><span class="se">\"</span><span class="s2">: </span><span class="se">\"</span><span class="s2">Naidu</span><span class="se">\"</span><span class="s2">,</span><span class="se">\n</span><span class="s2">"</span><span class="p">,</span>
+    <span class="s2">"    </span><span class="se">\"</span><span class="s2">DOB</span><span class="se">\"</span><span class="s2">: </span><span class="se">\"</span><span class="s2">August 2</span><span class="se">\"</span><span class="s2">,</span><span class="se">\n</span><span class="s2">"</span><span class="p">,</span>
+    <span class="s2">"    </span><span class="se">\"</span><span class="s2">Residence</span><span class="se">\"</span><span class="s2">: </span><span class="se">\"</span><span class="s2">Temecula</span><span class="se">\"</span><span class="s2">,</span><span class="se">\n</span><span class="s2">"</span><span class="p">,</span>
+    <span class="s2">"    </span><span class="se">\"</span><span class="s2">Email</span><span class="se">\"</span><span class="s2">: </span><span class="se">\"</span><span class="s2">snaidu@powayusd.com</span><span class="se">\"</span><span class="s2">,</span><span class="se">\n</span><span class="s2">"</span><span class="p">,</span>
+    <span class="s2">"    </span><span class="se">\"</span><span class="s2">Owns_Cars</span><span class="se">\"</span><span class="s2">: [</span><span class="se">\"</span><span class="s2">4Runner</span><span class="se">\"</span><span class="s2">]</span><span class="se">\n</span><span class="s2">"</span><span class="p">,</span>
+    <span class="s2">"})</span><span class="se">\n</span><span class="s2">"</span><span class="p">,</span>
+    <span class="s2">"</span><span class="se">\n</span><span class="s2">"</span><span class="p">,</span>
+    <span class="s2">"InfoDb.append({</span><span class="se">\n</span><span class="s2">"</span><span class="p">,</span>
+    <span class="s2">"    </span><span class="se">\"</span><span class="s2">FirstName</span><span class="se">\"</span><span class="s2">: </span><span class="se">\"</span><span class="s2">Ryan</span><span class="se">\"</span><span class="s2">,</span><span class="se">\n</span><span class="s2">"</span><span class="p">,</span>
+    <span class="s2">"    </span><span class="se">\"</span><span class="s2">LastName</span><span class="se">\"</span><span class="s2">: </span><span class="se">\"</span><span class="s2">Hakimipour</span><span class="se">\"</span><span class="s2">,</span><span class="se">\n</span><span class="s2">"</span><span class="p">,</span>
+    <span class="s2">"    </span><span class="se">\"</span><span class="s2">DOB</span><span class="se">\"</span><span class="s2">: </span><span class="se">\"</span><span class="s2">June 15</span><span class="se">\"</span><span class="s2">,</span><span class="se">\n</span><span class="s2">"</span><span class="p">,</span>
+    <span class="s2">"    </span><span class="se">\"</span><span class="s2">Residence</span><span class="se">\"</span><span class="s2">: </span><span class="se">\"</span><span class="s2">San Diego</span><span class="se">\"</span><span class="s2">,</span><span class="se">\n</span><span class="s2">"</span><span class="p">,</span>
+    <span class="s2">"    </span><span class="se">\"</span><span class="s2">Email</span><span class="se">\"</span><span class="s2">: </span><span class="se">\"</span><span class="s2">hakimipourryan@gmail.com</span><span class="se">\"</span><span class="s2">,</span><span class="se">\n</span><span class="s2">"</span><span class="p">,</span>
+    <span class="s2">"    </span><span class="se">\"</span><span class="s2">Owns_Cars</span><span class="se">\"</span><span class="s2">: [</span><span class="se">\"</span><span class="s2">None</span><span class="se">\"</span><span class="s2">]</span><span class="se">\n</span><span class="s2">"</span><span class="p">,</span>
+    <span class="s2">"})</span><span class="se">\n</span><span class="s2">"</span><span class="p">,</span>
+    <span class="s2">"</span><span class="se">\n</span><span class="s2">"</span><span class="p">,</span>
+    <span class="s2">"InfoDb.append({</span><span class="se">\n</span><span class="s2">"</span><span class="p">,</span>
+    <span class="s2">"    </span><span class="se">\"</span><span class="s2">FirstName</span><span class="se">\"</span><span class="s2">: </span><span class="se">\"</span><span class="s2">Soham</span><span class="se">\"</span><span class="s2">,</span><span class="se">\n</span><span class="s2">"</span><span class="p">,</span>
+    <span class="s2">"    </span><span class="se">\"</span><span class="s2">LastName</span><span class="se">\"</span><span class="s2">: </span><span class="se">\"</span><span class="s2">Kamat</span><span class="se">\"</span><span class="s2">,</span><span class="se">\n</span><span class="s2">"</span><span class="p">,</span>
+    <span class="s2">"    </span><span class="se">\"</span><span class="s2">DOB</span><span class="se">\"</span><span class="s2">: </span><span class="se">\"</span><span class="s2">March 9</span><span class="se">\"</span><span class="s2">,</span><span class="se">\n</span><span class="s2">"</span><span class="p">,</span>
+    <span class="s2">"    </span><span class="se">\"</span><span class="s2">Residence</span><span class="se">\"</span><span class="s2">: </span><span class="se">\"</span><span class="s2">San Diego</span><span class="se">\"</span><span class="s2">,</span><span class="se">\n</span><span class="s2">"</span><span class="p">,</span>
+    <span class="s2">"    </span><span class="se">\"</span><span class="s2">Email</span><span class="se">\"</span><span class="s2">: </span><span class="se">\"</span><span class="s2">sohamk10039@stu.powayusd.com</span><span class="se">\"</span><span class="s2">,</span><span class="se">\n</span><span class="s2">"</span><span class="p">,</span>
+    <span class="s2">"    </span><span class="se">\"</span><span class="s2">Owns_Cars</span><span class="se">\"</span><span class="s2">: [</span><span class="se">\"</span><span class="s2">None</span><span class="se">\"</span><span class="s2">]</span><span class="se">\n</span><span class="s2">"</span><span class="p">,</span>
+    <span class="s2">"})</span><span class="se">\n</span><span class="s2">"</span><span class="p">,</span>
+    <span class="s2">"</span><span class="se">\n</span><span class="s2">"</span><span class="p">,</span>
+    <span class="s2">"# Print the data structure</span><span class="se">\n</span><span class="s2">"</span><span class="p">,</span>
+    <span class="s2">"print(InfoDb)"</span>
+   <span class="p">]</span>
+  <span class="p">},</span>
+  <span class="p">{</span>
+   <span class="s2">"cell_type"</span><span class="p">:</span> <span class="s2">"markdown"</span><span class="p">,</span>
+   <span class="s2">"metadata"</span><span class="p">:</span> <span class="p">{},</span>
+   <span class="s2">"source"</span><span class="p">:</span> <span class="p">[</span>
+    <span class="s2">"## For Loops and Index</span><span class="se">\n</span><span class="s2">"</span><span class="p">,</span>
+    <span class="s2">"</span><span class="se">\n</span><span class="s2">"</span><span class="p">,</span>
+    <span class="s2">"Using `for loops` and iterating through using `index` in python. Here is a simple example:"</span>
+   <span class="p">]</span>
+  <span class="p">},</span>
+  <span class="p">{</span>
+   <span class="s2">"cell_type"</span><span class="p">:</span> <span class="s2">"code"</span><span class="p">,</span>
+   <span class="s2">"execution_count"</span><span class="p">:</span> <span class="mi">3</span><span class="p">,</span>
+   <span class="s2">"metadata"</span><span class="p">:</span> <span class="p">{},</span>
+   <span class="s2">"outputs"</span><span class="p">:</span> <span class="p">[</span>
+    <span class="p">{</span>
+     <span class="s2">"name"</span><span class="p">:</span> <span class="s2">"stdout"</span><span class="p">,</span>
+     <span class="s2">"output_type"</span><span class="p">:</span> <span class="s2">"stream"</span><span class="p">,</span>
+     <span class="s2">"text"</span><span class="p">:</span> <span class="p">[</span>
+      <span class="s2">"Honda</span><span class="se">\n</span><span class="s2">"</span><span class="p">,</span>
+      <span class="s2">"Hyundai</span><span class="se">\n</span><span class="s2">"</span><span class="p">,</span>
+      <span class="s2">"Kia</span><span class="se">\n</span><span class="s2">"</span><span class="p">,</span>
+      <span class="s2">"Tesla</span><span class="se">\n</span><span class="s2">"</span><span class="p">,</span>
+      <span class="s2">"Lamborghini</span><span class="se">\n</span><span class="s2">"</span><span class="p">,</span>
+      <span class="s2">"Ferrari</span><span class="se">\n</span><span class="s2">"</span><span class="p">,</span>
+      <span class="s2">"Bugatti</span><span class="se">\n</span><span class="s2">"</span><span class="p">,</span>
+      <span class="s2">"Toyota</span><span class="se">\n</span><span class="s2">"</span><span class="p">,</span>
+      <span class="s2">"Porsche</span><span class="se">\n</span><span class="s2">"</span><span class="p">,</span>
+      <span class="s2">"Mustang</span><span class="se">\n</span><span class="s2">"</span><span class="p">,</span>
+      <span class="s2">"BMW</span><span class="se">\n</span><span class="s2">"</span><span class="p">,</span>
+      <span class="s2">"Mercedes</span><span class="se">\n</span><span class="s2">"</span>
+     <span class="p">]</span>
+    <span class="p">}</span>
+   <span class="p">],</span>
+   <span class="s2">"source"</span><span class="p">:</span> <span class="p">[</span>
+    <span class="s2">"Car_Brands = [</span><span class="se">\"</span><span class="s2">Honda</span><span class="se">\"</span><span class="s2">, </span><span class="se">\"</span><span class="s2">Hyundai</span><span class="se">\"</span><span class="s2">, </span><span class="se">\"</span><span class="s2">Kia</span><span class="se">\"</span><span class="s2">, </span><span class="se">\"</span><span class="s2">Tesla</span><span class="se">\"</span><span class="s2">, </span><span class="se">\"</span><span class="s2">Lamborghini</span><span class="se">\"</span><span class="s2">, </span><span class="se">\"</span><span class="s2">Ferrari</span><span class="se">\"</span><span class="s2">, </span><span class="se">\"</span><span class="s2">Bugatti</span><span class="se">\"</span><span class="s2">, </span><span class="se">\"</span><span class="s2">Toyota</span><span class="se">\"</span><span class="s2">, </span><span class="se">\"</span><span class="s2">Porsche</span><span class="se">\"</span><span class="s2">, </span><span class="se">\"</span><span class="s2">Mustang</span><span class="se">\"</span><span class="s2">, </span><span class="se">\"</span><span class="s2">BMW</span><span class="se">\"</span><span class="s2">, </span><span class="se">\"</span><span class="s2">Mercedes</span><span class="se">\"</span><span class="s2">]</span><span class="se">\n</span><span class="s2">"</span><span class="p">,</span>
+    <span class="s2">"for i in Car_Brands:</span><span class="se">\n</span><span class="s2">"</span><span class="p">,</span>
+    <span class="s2">"    print(i)"</span>
+   <span class="p">]</span>
+  <span class="p">},</span>
+  <span class="p">{</span>
+   <span class="s2">"cell_type"</span><span class="p">:</span> <span class="s2">"markdown"</span><span class="p">,</span>
+   <span class="s2">"metadata"</span><span class="p">:</span> <span class="p">{},</span>
+   <span class="s2">"source"</span><span class="p">:</span> <span class="p">[</span>
+    <span class="s2">"## Outputting in Reverse Order</span><span class="se">\n</span><span class="s2">"</span><span class="p">,</span>
+    <span class="s2">"</span><span class="se">\n</span><span class="s2">"</span><span class="p">,</span>
+    <span class="s2">"It is possible to output data in a reverse order. Here is an example using a palindrome:"</span>
+   <span class="p">]</span>
+  <span class="p">},</span>
+  <span class="p">{</span>
+   <span class="s2">"cell_type"</span><span class="p">:</span> <span class="s2">"code"</span><span class="p">,</span>
+   <span class="s2">"execution_count"</span><span class="p">:</span> <span class="mi">5</span><span class="p">,</span>
+   <span class="s2">"metadata"</span><span class="p">:</span> <span class="p">{},</span>
+   <span class="s2">"outputs"</span><span class="p">:</span> <span class="p">[</span>
+    <span class="p">{</span>
+     <span class="s2">"name"</span><span class="p">:</span> <span class="s2">"stdout"</span><span class="p">,</span>
+     <span class="s2">"output_type"</span><span class="p">:</span> <span class="s2">"stream"</span><span class="p">,</span>
+     <span class="s2">"text"</span><span class="p">:</span> <span class="p">[</span>
+      <span class="s2">"eyb</span><span class="se">\n</span><span class="s2">"</span><span class="p">,</span>
+      <span class="s2">"bye</span><span class="se">\n</span><span class="s2">"</span><span class="p">,</span>
+      <span class="s2">"The provided word is not a palindrome.</span><span class="se">\n</span><span class="s2">"</span>
+     <span class="p">]</span>
+    <span class="p">}</span>
+   <span class="p">],</span>
+   <span class="s2">"source"</span><span class="p">:</span> <span class="p">[</span>
+    <span class="s2">"def is_palindrome(prompt):</span><span class="se">\n</span><span class="s2">"</span><span class="p">,</span>
+    <span class="s2">"    print(prompt[::-1])</span><span class="se">\n</span><span class="s2">"</span><span class="p">,</span>
+    <span class="s2">"    print(prompt)</span><span class="se">\n</span><span class="s2">"</span><span class="p">,</span>
+    <span class="s2">"    return prompt[::-1] == prompt</span><span class="se">\n</span><span class="s2">"</span><span class="p">,</span>
+    <span class="s2">"</span><span class="se">\n</span><span class="s2">"</span><span class="p">,</span>
+    <span class="s2">"word = input(</span><span class="se">\"</span><span class="s2">Enter a word: </span><span class="se">\"</span><span class="s2">)</span><span class="se">\n</span><span class="s2">"</span><span class="p">,</span>
+    <span class="s2">"if is_palindrome(word.lower()) is True:</span><span class="se">\n</span><span class="s2">"</span><span class="p">,</span>
+    <span class="s2">"    print(</span><span class="se">\"</span><span class="si">{0}</span><span class="s2"> is a palindrome!</span><span class="se">\"</span><span class="s2">.format(word))</span><span class="se">\n</span><span class="s2">"</span><span class="p">,</span>
+    <span class="s2">"else:</span><span class="se">\n</span><span class="s2">"</span><span class="p">,</span>
+    <span class="s2">"    print(</span><span class="se">\"</span><span class="s2">The provided word is not a palindrome.</span><span class="se">\"</span><span class="s2">)"</span>
+   <span class="p">]</span>
+  <span class="p">},</span>
+  <span class="p">{</span>
+   <span class="s2">"cell_type"</span><span class="p">:</span> <span class="s2">"markdown"</span><span class="p">,</span>
+   <span class="s2">"metadata"</span><span class="p">:</span> <span class="p">{},</span>
+   <span class="s2">"source"</span><span class="p">:</span> <span class="p">[</span>
+    <span class="s2">"## Other list methods</span><span class="se">\n</span><span class="s2">"</span><span class="p">,</span>
+    <span class="s2">"</span><span class="se">\n</span><span class="s2">"</span><span class="p">,</span>
+    <span class="s2">"Lists can have a variety of methods performed on them. A couple being `.append()` or `while loop`. Here is an example using `.append()` and `.lower()` with a `for loop`:"</span>
+   <span class="p">]</span>
+  <span class="p">},</span>
+  <span class="p">{</span>
+   <span class="s2">"cell_type"</span><span class="p">:</span> <span class="s2">"code"</span><span class="p">,</span>
+   <span class="s2">"execution_count"</span><span class="p">:</span> <span class="mi">23</span><span class="p">,</span>
+   <span class="s2">"metadata"</span><span class="p">:</span> <span class="p">{},</span>
+   <span class="s2">"outputs"</span><span class="p">:</span> <span class="p">[</span>
+    <span class="p">{</span>
+     <span class="s2">"name"</span><span class="p">:</span> <span class="s2">"stdout"</span><span class="p">,</span>
+     <span class="s2">"output_type"</span><span class="p">:</span> <span class="s2">"stream"</span><span class="p">,</span>
+     <span class="s2">"text"</span><span class="p">:</span> <span class="p">[</span>
+      <span class="s2">"['box jellyfish', 'african cape buffalo', 'black mamba', 'blue-ringed octopus', 'cone snail']</span><span class="se">\n</span><span class="s2">"</span>
+     <span class="p">]</span>
+    <span class="p">}</span>
+   <span class="p">],</span>
+   <span class="s2">"source"</span><span class="p">:</span> <span class="p">[</span>
+    <span class="s2">"Dangerous_Animals = [</span><span class="se">\"</span><span class="s2">Box Jellyfish</span><span class="se">\"</span><span class="s2">, </span><span class="se">\"</span><span class="s2">African CAPE BuFfalo</span><span class="se">\"</span><span class="s2">, </span><span class="se">\"</span><span class="s2">BLAck MambA</span><span class="se">\"</span><span class="s2">, </span><span class="se">\"</span><span class="s2">Blue-RINGED octopus</span><span class="se">\"</span><span class="s2">]</span><span class="se">\n</span><span class="s2">"</span><span class="p">,</span>
+    <span class="s2">"Dangerous_Animals.append(</span><span class="se">\"</span><span class="s2">Cone SnAIl</span><span class="se">\"</span><span class="s2">)</span><span class="se">\n</span><span class="s2">"</span><span class="p">,</span>
+    <span class="s2">"for i in range(len(Dangerous_Animals)):</span><span class="se">\n</span><span class="s2">"</span><span class="p">,</span>
+    <span class="s2">"    Dangerous_Animals[i] = Dangerous_Animals[i].lower()</span><span class="se">\n</span><span class="s2">"</span><span class="p">,</span>
+    <span class="s2">"print(Dangerous_Animals)"</span>
+   <span class="p">]</span>
+  <span class="p">},</span>
+  <span class="p">{</span>
+   <span class="s2">"cell_type"</span><span class="p">:</span> <span class="s2">"markdown"</span><span class="p">,</span>
+   <span class="s2">"metadata"</span><span class="p">:</span> <span class="p">{},</span>
+   <span class="s2">"source"</span><span class="p">:</span> <span class="p">[</span>
+    <span class="s2">"## Adding to a Dictionary</span><span class="se">\n</span><span class="s2">"</span><span class="p">,</span>
+    <span class="s2">"</span><span class="se">\n</span><span class="s2">"</span><span class="p">,</span>
+    <span class="s2">"You can also add or create new keys and values to a dictionary data set. This can also be done with input. Here is an example:"</span>
+   <span class="p">]</span>
+  <span class="p">},</span>
+  <span class="p">{</span>
+   <span class="s2">"cell_type"</span><span class="p">:</span> <span class="s2">"code"</span><span class="p">,</span>
+   <span class="s2">"execution_count"</span><span class="p">:</span> <span class="mi">29</span><span class="p">,</span>
+   <span class="s2">"metadata"</span><span class="p">:</span> <span class="p">{},</span>
+   <span class="s2">"outputs"</span><span class="p">:</span> <span class="p">[</span>
+    <span class="p">{</span>
+     <span class="s2">"name"</span><span class="p">:</span> <span class="s2">"stdout"</span><span class="p">,</span>
+     <span class="s2">"output_type"</span><span class="p">:</span> <span class="s2">"stream"</span><span class="p">,</span>
+     <span class="s2">"text"</span><span class="p">:</span> <span class="p">[</span>
+      <span class="s2">"{'Pikachu': 'Electric-type', 'Charizard': 'Fire-type', 'Blastoise': 'Water-type', 'Venusaur': 'Grass-type', 'Snorlax': 'Normal-type', 'Garchomp': 'Dragon-type', 'Lucario': 'Fighting-type', 'Darkrai': 'Dark-type', 'Arceus': 'Normal-type'}</span><span class="se">\n</span><span class="s2">"</span><span class="p">,</span>
+      <span class="s2">"{'Pikachu': 'Electric-type', 'Charizard': 'Fire-type', 'Blastoise': 'Water-type', 'Venusaur': 'Grass-type', 'Snorlax': 'Normal-type', 'Garchomp': 'Dragon-type', 'Lucario': 'Fighting-type', 'Darkrai': 'Dark-type', 'Arceus': 'Normal-type', 'Reshiram': 'Dragon-type'}</span><span class="se">\n</span><span class="s2">"</span><span class="p">,</span>
+      <span class="s2">"{'Pikachu': 'Electric-type', 'Charizard': 'Fire-type', 'Blastoise': 'Water-type', 'Venusaur': 'Grass-type', 'Snorlax': 'Normal-type', 'Garchomp': 'Dragon-type', 'Lucario': 'Fighting-type', 'Darkrai': 'Dark-type', 'Arceus': 'Normal-type', 'Reshiram': 'Dragon-type', 'Articuno': 'Ice-type'}</span><span class="se">\n</span><span class="s2">"</span>
+     <span class="p">]</span>
+    <span class="p">}</span>
+   <span class="p">],</span>
+   <span class="s2">"source"</span><span class="p">:</span> <span class="p">[</span>
+    <span class="s2">"My_Dict = {</span><span class="se">\n</span><span class="s2">"</span><span class="p">,</span>
+    <span class="s2">"    </span><span class="se">\"</span><span class="s2">Pikachu</span><span class="se">\"</span><span class="s2">: </span><span class="se">\"</span><span class="s2">Electric-type</span><span class="se">\"</span><span class="s2">,</span><span class="se">\n</span><span class="s2">"</span><span class="p">,</span>
+    <span class="s2">"    </span><span class="se">\"</span><span class="s2">Charizard</span><span class="se">\"</span><span class="s2">: </span><span class="se">\"</span><span class="s2">Fire-type</span><span class="se">\"</span><span class="s2">,</span><span class="se">\n</span><span class="s2">"</span><span class="p">,</span>
+    <span class="s2">"    </span><span class="se">\"</span><span class="s2">Blastoise</span><span class="se">\"</span><span class="s2">: </span><span class="se">\"</span><span class="s2">Water-type</span><span class="se">\"</span><span class="s2">,</span><span class="se">\n</span><span class="s2">"</span><span class="p">,</span>
+    <span class="s2">"    </span><span class="se">\"</span><span class="s2">Venusaur</span><span class="se">\"</span><span class="s2">: </span><span class="se">\"</span><span class="s2">Grass-type</span><span class="se">\"</span><span class="s2">,</span><span class="se">\n</span><span class="s2">"</span><span class="p">,</span>
+    <span class="s2">"    </span><span class="se">\"</span><span class="s2">Snorlax</span><span class="se">\"</span><span class="s2">: </span><span class="se">\"</span><span class="s2">Normal-type</span><span class="se">\"</span><span class="s2">,</span><span class="se">\n</span><span class="s2">"</span><span class="p">,</span>
+    <span class="s2">"    </span><span class="se">\"</span><span class="s2">Garchomp</span><span class="se">\"</span><span class="s2">: </span><span class="se">\"</span><span class="s2">Dragon-type</span><span class="se">\"</span><span class="s2">,</span><span class="se">\n</span><span class="s2">"</span><span class="p">,</span>
+    <span class="s2">"    </span><span class="se">\"</span><span class="s2">Lucario</span><span class="se">\"</span><span class="s2">: </span><span class="se">\"</span><span class="s2">Fighting-type</span><span class="se">\"</span><span class="s2">,</span><span class="se">\n</span><span class="s2">"</span><span class="p">,</span>
+    <span class="s2">"    </span><span class="se">\"</span><span class="s2">Darkrai</span><span class="se">\"</span><span class="s2">: </span><span class="se">\"</span><span class="s2">Dark-type</span><span class="se">\"</span><span class="s2">,</span><span class="se">\n</span><span class="s2">"</span><span class="p">,</span>
+    <span class="s2">"    </span><span class="se">\"</span><span class="s2">Arceus</span><span class="se">\"</span><span class="s2">: </span><span class="se">\"</span><span class="s2">Normal-type</span><span class="se">\"</span><span class="s2">,</span><span class="se">\n</span><span class="s2">"</span><span class="p">,</span>
+    <span class="s2">"}</span><span class="se">\n</span><span class="s2">"</span><span class="p">,</span>
+    <span class="s2">"print(My_Dict)</span><span class="se">\n</span><span class="s2">"</span><span class="p">,</span>
+    <span class="s2">"My_Dict[</span><span class="se">\"</span><span class="s2">Reshiram</span><span class="se">\"</span><span class="s2">] = </span><span class="se">\"</span><span class="s2">Dragon-type</span><span class="se">\"</span><span class="s2"> #Added new key and value into dictionary</span><span class="se">\n</span><span class="s2">"</span><span class="p">,</span>
+    <span class="s2">"print(My_Dict)</span><span class="se">\n</span><span class="s2">"</span><span class="p">,</span>
+    <span class="s2">"My_Dict[</span><span class="se">\"</span><span class="s2">Articuno</span><span class="se">\"</span><span class="s2">] = input()</span><span class="se">\n</span><span class="s2">"</span><span class="p">,</span>
+    <span class="s2">"print(My_Dict)</span><span class="se">\n</span><span class="s2">"</span>
+   <span class="p">]</span>
+  <span class="p">},</span>
+  <span class="p">{</span>
+   <span class="s2">"cell_type"</span><span class="p">:</span> <span class="s2">"markdown"</span><span class="p">,</span>
+   <span class="s2">"metadata"</span><span class="p">:</span> <span class="p">{},</span>
+   <span class="s2">"source"</span><span class="p">:</span> <span class="p">[</span>
+    <span class="s2">"## Python Quiz</span><span class="se">\n</span><span class="s2">"</span><span class="p">,</span>
+    <span class="s2">"</span><span class="se">\n</span><span class="s2">"</span><span class="p">,</span>
+    <span class="s2">"Making a qyuz that uses a list of dictionaries (InfoDb):"</span>
+   <span class="p">]</span>
+  <span class="p">},</span>
+  <span class="p">{</span>
+   <span class="s2">"cell_type"</span><span class="p">:</span> <span class="s2">"code"</span><span class="p">,</span>
+   <span class="s2">"execution_count"</span><span class="p">:</span> <span class="mi">11</span><span class="p">,</span>
+   <span class="s2">"metadata"</span><span class="p">:</span> <span class="p">{},</span>
+   <span class="s2">"outputs"</span><span class="p">:</span> <span class="p">[</span>
+    <span class="p">{</span>
+     <span class="s2">"name"</span><span class="p">:</span> <span class="s2">"stdout"</span><span class="p">,</span>
+     <span class="s2">"output_type"</span><span class="p">:</span> <span class="s2">"stream"</span><span class="p">,</span>
+     <span class="s2">"text"</span><span class="p">:</span> <span class="p">[</span>
+      <span class="s2">"Hello, you will be asked 5 short questions</span><span class="se">\n</span><span class="s2">"</span><span class="p">,</span>
+      <span class="s2">"Question: What is the answer to this math problem: What does 45x7=</span><span class="se">\n</span><span class="s2">"</span><span class="p">,</span>
+      <span class="s2">"Answer is correct</span><span class="se">\n</span><span class="s2">"</span><span class="p">,</span>
+      <span class="s2">"Question: What is the most popular religion in the world?</span><span class="se">\n</span><span class="s2">"</span><span class="p">,</span>
+      <span class="s2">"Answer is correct</span><span class="se">\n</span><span class="s2">"</span><span class="p">,</span>
+      <span class="s2">"Question: What is the capital of the U.S?</span><span class="se">\n</span><span class="s2">"</span><span class="p">,</span>
+      <span class="s2">"Answer is correct</span><span class="se">\n</span><span class="s2">"</span><span class="p">,</span>
+      <span class="s2">"Question: How many kg is in 5g?</span><span class="se">\n</span><span class="s2">"</span><span class="p">,</span>
+      <span class="s2">"Answer is correct</span><span class="se">\n</span><span class="s2">"</span><span class="p">,</span>
+      <span class="s2">"Question: How many mm are in 1 km?</span><span class="se">\n</span><span class="s2">"</span><span class="p">,</span>
+      <span class="s2">"Answer is incorrect</span><span class="se">\n</span><span class="s2">"</span><span class="p">,</span>
+      <span class="s2">"You scored 4/5</span><span class="se">\n</span><span class="s2">"</span>
+     <span class="p">]</span>
+    <span class="p">}</span>
+   <span class="p">],</span>
+   <span class="s2">"source"</span><span class="p">:</span> <span class="p">[</span>
+    <span class="s2">"def Python_Quiz(prompt):</span><span class="se">\n</span><span class="s2">"</span><span class="p">,</span>
+    <span class="s2">"    global word</span><span class="se">\n</span><span class="s2">"</span><span class="p">,</span>
+    <span class="s2">"    print (</span><span class="se">\"</span><span class="s2">Question: </span><span class="se">\"</span><span class="s2"> + prompt)</span><span class="se">\n</span><span class="s2">"</span><span class="p">,</span>
+    <span class="s2">"    word = input()</span><span class="se">\n</span><span class="s2">"</span><span class="p">,</span>
+    <span class="s2">"    return word</span><span class="se">\n</span><span class="s2">"</span><span class="p">,</span>
+    <span class="s2">"</span><span class="se">\n</span><span class="s2">"</span><span class="p">,</span>
+    <span class="s2">"questions_number = 5</span><span class="se">\n</span><span class="s2">"</span><span class="p">,</span>
+    <span class="s2">"correct_answer = 0</span><span class="se">\n</span><span class="s2">"</span><span class="p">,</span>
+    <span class="s2">"</span><span class="se">\n</span><span class="s2">"</span><span class="p">,</span>
+    <span class="s2">"print(</span><span class="se">\"</span><span class="s2">Hello, you will be asked </span><span class="se">\"</span><span class="s2"> + str(questions_number) + </span><span class="se">\"</span><span class="s2"> short questions</span><span class="se">\"</span><span class="s2">)</span><span class="se">\n</span><span class="s2">"</span><span class="p">,</span>
+    <span class="s2">"</span><span class="se">\n</span><span class="s2">"</span><span class="p">,</span>
+    <span class="s2">"My_Quiz = [{</span><span class="se">\n</span><span class="s2">"</span><span class="p">,</span>
+    <span class="s2">"    </span><span class="se">\"</span><span class="s2">What is the answer to this math problem: What does 45x7=</span><span class="se">\"</span><span class="s2">: </span><span class="se">\"</span><span class="s2">315</span><span class="se">\"</span><span class="s2">,</span><span class="se">\n</span><span class="s2">"</span><span class="p">,</span>
+    <span class="s2">"    </span><span class="se">\"</span><span class="s2">What is the most popular religion in the world?</span><span class="se">\"</span><span class="s2">: </span><span class="se">\"</span><span class="s2">Christianity</span><span class="se">\"</span><span class="s2">,</span><span class="se">\n</span><span class="s2">"</span><span class="p">,</span>
+    <span class="s2">"    </span><span class="se">\"</span><span class="s2">What is the capital of the U.S?</span><span class="se">\"</span><span class="s2">: </span><span class="se">\"</span><span class="s2">Washington D.C.</span><span class="se">\"</span><span class="s2">,</span><span class="se">\n</span><span class="s2">"</span><span class="p">,</span>
+    <span class="s2">"    </span><span class="se">\"</span><span class="s2">How many kg is in 5g?</span><span class="se">\"</span><span class="s2">: </span><span class="se">\"</span><span class="s2">0.005 kg</span><span class="se">\"</span><span class="s2">,</span><span class="se">\n</span><span class="s2">"</span><span class="p">,</span>
+    <span class="s2">"    </span><span class="se">\"</span><span class="s2">How many mm are in 1 km?</span><span class="se">\"</span><span class="s2">: </span><span class="se">\"</span><span class="s2">1000000 mm</span><span class="se">\"</span><span class="s2">,</span><span class="se">\n</span><span class="s2">"</span><span class="p">,</span>
+    <span class="s2">"}]</span><span class="se">\n</span><span class="s2">"</span><span class="p">,</span>
+    <span class="s2">"# My_Quiz.append({</span><span class="se">\n</span><span class="s2">"</span><span class="p">,</span>
+    <span class="s2">"#     </span><span class="se">\"</span><span class="s2">What is the answer to this math problem: What does 45x7=</span><span class="se">\"</span><span class="s2">: </span><span class="se">\"</span><span class="s2">315</span><span class="se">\"</span><span class="s2">,</span><span class="se">\n</span><span class="s2">"</span><span class="p">,</span>
+    <span class="s2">"#     </span><span class="se">\"</span><span class="s2">What is the most popular religion in the world?</span><span class="se">\"</span><span class="s2">: </span><span class="se">\"</span><span class="s2">Christianity</span><span class="se">\"</span><span class="s2">,</span><span class="se">\n</span><span class="s2">"</span><span class="p">,</span>
+    <span class="s2">"#     </span><span class="se">\"</span><span class="s2">What is the capital of the U.S?</span><span class="se">\"</span><span class="s2">: </span><span class="se">\"</span><span class="s2">Washington D.C.</span><span class="se">\"</span><span class="s2">,</span><span class="se">\n</span><span class="s2">"</span><span class="p">,</span>
+    <span class="s2">"#     </span><span class="se">\"</span><span class="s2">How many kg is in 5g?</span><span class="se">\"</span><span class="s2">: </span><span class="se">\"</span><span class="s2">0.005 kg</span><span class="se">\"</span><span class="s2">,</span><span class="se">\n</span><span class="s2">"</span><span class="p">,</span>
+    <span class="s2">"#     </span><span class="se">\"</span><span class="s2">How many mm are in 1 km?</span><span class="se">\"</span><span class="s2">: </span><span class="se">\"</span><span class="s2">1000000 mm</span><span class="se">\"</span><span class="s2">,</span><span class="se">\n</span><span class="s2">"</span><span class="p">,</span>
+    <span class="s2">"# })</span><span class="se">\n</span><span class="s2">"</span><span class="p">,</span>
+    <span class="s2">"</span><span class="se">\n</span><span class="s2">"</span><span class="p">,</span>
+    <span class="s2">"for dict in My_Quiz:</span><span class="se">\n</span><span class="s2">"</span><span class="p">,</span>
+    <span class="s2">"    for questions, answers in dict.items():</span><span class="se">\n</span><span class="s2">"</span><span class="p">,</span>
+    <span class="s2">"        Python_Quiz(questions)</span><span class="se">\n</span><span class="s2">"</span><span class="p">,</span>
+    <span class="s2">"        if word == answers:</span><span class="se">\n</span><span class="s2">"</span><span class="p">,</span>
+    <span class="s2">"            print(</span><span class="se">\"</span><span class="s2">Answer is correct</span><span class="se">\"</span><span class="s2">)</span><span class="se">\n</span><span class="s2">"</span><span class="p">,</span>
+    <span class="s2">"            correct_answer += 1</span><span class="se">\n</span><span class="s2">"</span><span class="p">,</span>
+    <span class="s2">"        else:</span><span class="se">\n</span><span class="s2">"</span><span class="p">,</span>
+    <span class="s2">"            print(</span><span class="se">\"</span><span class="s2">Answer is incorrect</span><span class="se">\"</span><span class="s2">)</span><span class="se">\n</span><span class="s2">"</span><span class="p">,</span>
+    <span class="s2">"</span><span class="se">\n</span><span class="s2">"</span><span class="p">,</span>
+    <span class="s2">"print(</span><span class="se">\"</span><span class="s2">You scored </span><span class="se">\"</span><span class="s2"> + str(correct_answer) + </span><span class="se">\"</span><span class="s2">/</span><span class="se">\"</span><span class="s2"> + str(questions_number))</span><span class="se">\n</span><span class="s2">"</span>
+   <span class="p">]</span>
+  <span class="p">}</span>
+ <span class="p">],</span>
+ <span class="s2">"metadata"</span><span class="p">:</span> <span class="p">{</span>
+  <span class="s2">"kernelspec"</span><span class="p">:</span> <span class="p">{</span>
+   <span class="s2">"display_name"</span><span class="p">:</span> <span class="s2">"Python 3.8.10 64-bit"</span><span class="p">,</span>
+   <span class="s2">"language"</span><span class="p">:</span> <span class="s2">"python"</span><span class="p">,</span>
+   <span class="s2">"name"</span><span class="p">:</span> <span class="s2">"python3"</span>
+  <span class="p">},</span>
+  <span class="s2">"language_info"</span><span class="p">:</span> <span class="p">{</span>
+   <span class="s2">"codemirror_mode"</span><span class="p">:</span> <span class="p">{</span>
+    <span class="s2">"name"</span><span class="p">:</span> <span class="s2">"ipython"</span><span class="p">,</span>
+    <span class="s2">"version"</span><span class="p">:</span> <span class="mi">3</span>
+   <span class="p">},</span>
+   <span class="s2">"file_extension"</span><span class="p">:</span> <span class="s2">".py"</span><span class="p">,</span>
+   <span class="s2">"mimetype"</span><span class="p">:</span> <span class="s2">"text/x-python"</span><span class="p">,</span>
+   <span class="s2">"name"</span><span class="p">:</span> <span class="s2">"python"</span><span class="p">,</span>
+   <span class="s2">"nbconvert_exporter"</span><span class="p">:</span> <span class="s2">"python"</span><span class="p">,</span>
+   <span class="s2">"pygments_lexer"</span><span class="p">:</span> <span class="s2">"ipython3"</span><span class="p">,</span>
+   <span class="s2">"version"</span><span class="p">:</span> <span class="s2">"3.8.10"</span>
+  <span class="p">},</span>
+  <span class="s2">"orig_nbformat"</span><span class="p">:</span> <span class="mi">4</span><span class="p">,</span>
+  <span class="s2">"vscode"</span><span class="p">:</span> <span class="p">{</span>
+   <span class="s2">"interpreter"</span><span class="p">:</span> <span class="p">{</span>
+    <span class="s2">"hash"</span><span class="p">:</span> <span class="s2">"916dbcbb3f70747c44a77c7bcd40155683ae19c65e1c03b4aa3499c5328201f1"</span>
+   <span class="p">}</span>
+  <span class="p">}</span>
+ <span class="p">},</span>
+ <span class="s2">"nbformat"</span><span class="p">:</span> <span class="mi">4</span><span class="p">,</span>
+ <span class="s2">"nbformat_minor"</span><span class="p">:</span> <span class="mi">2</span>
+<span class="p">}</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="output_area">
+
+
+
+<div class="output_text output_subarea output_execute_result">
+<pre>{'cells': [{'cell_type': 'markdown',
+   'metadata': {},
+   'source': ['# Python Lists and Dictionaries Post\n',
+    '&gt; Using lists and dictionaries in python code.\n',
+    '\n',
+    '- toc: true \n',
+    '- badges: true\n',
+    '- comments: true\n',
+    '- categories: [jupyter, Week 2]']},
+  {'cell_type': 'markdown',
+   'metadata': {},
+   'source': ['## InfoDb\n',
+    '\n',
+    'InfoDb is a dictionary inside of a list. Here is an example code using InfoDb:']},
+  {'cell_type': 'code',
+   'execution_count': 2,
+   'metadata': {},
+   'outputs': [{'name': 'stdout',
+     'output_type': 'stream',
+     'text': ["[{'FirstName': 'John', 'LastName': 'Mortensen', 'DOB': 'October 21', 'Residence': 'San Diego', 'Email': 'jmortensen@powayusd.com', 'Owns_Cars': ['2015-Fusion', '2011-Ranger', '2003-Excursion', '1997-F350', '1969-Cadillac']}, {'FirstName': 'Sunny', 'LastName': 'Naidu', 'DOB': 'August 2', 'Residence': 'Temecula', 'Email': 'snaidu@powayusd.com', 'Owns_Cars': ['4Runner']}, {'FirstName': 'Ryan', 'LastName': 'Hakimipour', 'DOB': 'June 15', 'Residence': 'San Diego', 'Email': 'hakimipourryan@gmail.com', 'Owns_Cars': ['None']}]\n"]}],
+   'source': ['# Define an empty List called InfoDb\n',
+    'InfoDb = []\n',
+    '\n',
+    '# Append to List a Dictionary of key/values related to a person and cars\n',
+    'InfoDb.append({\n',
+    '    "FirstName": "John",\n',
+    '    "LastName": "Mortensen",\n',
+    '    "DOB": "October 21",\n',
+    '    "Residence": "San Diego",\n',
+    '    "Email": "jmortensen@powayusd.com",\n',
+    '    "Owns_Cars": ["2015-Fusion", "2011-Ranger", "2003-Excursion", "1997-F350", "1969-Cadillac"]\n',
+    '})\n',
+    '\n',
+    '# Append to List a 2nd Dictionary of key/values\n',
+    'InfoDb.append({\n',
+    '    "FirstName": "Sunny",\n',
+    '    "LastName": "Naidu",\n',
+    '    "DOB": "August 2",\n',
+    '    "Residence": "Temecula",\n',
+    '    "Email": "snaidu@powayusd.com",\n',
+    '    "Owns_Cars": ["4Runner"]\n',
+    '})\n',
+    '\n',
+    'InfoDb.append({\n',
+    '    "FirstName": "Ryan",\n',
+    '    "LastName": "Hakimipour",\n',
+    '    "DOB": "June 15",\n',
+    '    "Residence": "San Diego",\n',
+    '    "Email": "hakimipourryan@gmail.com",\n',
+    '    "Owns_Cars": ["None"]\n',
+    '})\n',
+    '\n',
+    'InfoDb.append({\n',
+    '    "FirstName": "Soham",\n',
+    '    "LastName": "Kamat",\n',
+    '    "DOB": "March 9",\n',
+    '    "Residence": "San Diego",\n',
+    '    "Email": "sohamk10039@stu.powayusd.com",\n',
+    '    "Owns_Cars": ["None"]\n',
+    '})\n',
+    '\n',
+    '# Print the data structure\n',
+    'print(InfoDb)']},
+  {'cell_type': 'markdown',
+   'metadata': {},
+   'source': ['## For Loops and Index\n',
+    '\n',
+    'Using `for loops` and iterating through using `index` in python. Here is a simple example:']},
+  {'cell_type': 'code',
+   'execution_count': 3,
+   'metadata': {},
+   'outputs': [{'name': 'stdout',
+     'output_type': 'stream',
+     'text': ['Honda\n',
+      'Hyundai\n',
+      'Kia\n',
+      'Tesla\n',
+      'Lamborghini\n',
+      'Ferrari\n',
+      'Bugatti\n',
+      'Toyota\n',
+      'Porsche\n',
+      'Mustang\n',
+      'BMW\n',
+      'Mercedes\n']}],
+   'source': ['Car_Brands = ["Honda", "Hyundai", "Kia", "Tesla", "Lamborghini", "Ferrari", "Bugatti", "Toyota", "Porsche", "Mustang", "BMW", "Mercedes"]\n',
+    'for i in Car_Brands:\n',
+    '    print(i)']},
+  {'cell_type': 'markdown',
+   'metadata': {},
+   'source': ['## Outputting in Reverse Order\n',
+    '\n',
+    'It is possible to output data in a reverse order. Here is an example using a palindrome:']},
+  {'cell_type': 'code',
+   'execution_count': 5,
+   'metadata': {},
+   'outputs': [{'name': 'stdout',
+     'output_type': 'stream',
+     'text': ['eyb\n', 'bye\n', 'The provided word is not a palindrome.\n']}],
+   'source': ['def is_palindrome(prompt):\n',
+    '    print(prompt[::-1])\n',
+    '    print(prompt)\n',
+    '    return prompt[::-1] == prompt\n',
+    '\n',
+    'word = input("Enter a word: ")\n',
+    'if is_palindrome(word.lower()) is True:\n',
+    '    print("{0} is a palindrome!".format(word))\n',
+    'else:\n',
+    '    print("The provided word is not a palindrome.")']},
+  {'cell_type': 'markdown',
+   'metadata': {},
+   'source': ['## Other list methods\n',
+    '\n',
+    'Lists can have a variety of methods performed on them. A couple being `.append()` or `while loop`. Here is an example using `.append()` and `.lower()` with a `for loop`:']},
+  {'cell_type': 'code',
+   'execution_count': 23,
+   'metadata': {},
+   'outputs': [{'name': 'stdout',
+     'output_type': 'stream',
+     'text': ["['box jellyfish', 'african cape buffalo', 'black mamba', 'blue-ringed octopus', 'cone snail']\n"]}],
+   'source': ['Dangerous_Animals = ["Box Jellyfish", "African CAPE BuFfalo", "BLAck MambA", "Blue-RINGED octopus"]\n',
+    'Dangerous_Animals.append("Cone SnAIl")\n',
+    'for i in range(len(Dangerous_Animals)):\n',
+    '    Dangerous_Animals[i] = Dangerous_Animals[i].lower()\n',
+    'print(Dangerous_Animals)']},
+  {'cell_type': 'markdown',
+   'metadata': {},
+   'source': ['## Adding to a Dictionary\n',
+    '\n',
+    'You can also add or create new keys and values to a dictionary data set. This can also be done with input. Here is an example:']},
+  {'cell_type': 'code',
+   'execution_count': 29,
+   'metadata': {},
+   'outputs': [{'name': 'stdout',
+     'output_type': 'stream',
+     'text': ["{'Pikachu': 'Electric-type', 'Charizard': 'Fire-type', 'Blastoise': 'Water-type', 'Venusaur': 'Grass-type', 'Snorlax': 'Normal-type', 'Garchomp': 'Dragon-type', 'Lucario': 'Fighting-type', 'Darkrai': 'Dark-type', 'Arceus': 'Normal-type'}\n",
+      "{'Pikachu': 'Electric-type', 'Charizard': 'Fire-type', 'Blastoise': 'Water-type', 'Venusaur': 'Grass-type', 'Snorlax': 'Normal-type', 'Garchomp': 'Dragon-type', 'Lucario': 'Fighting-type', 'Darkrai': 'Dark-type', 'Arceus': 'Normal-type', 'Reshiram': 'Dragon-type'}\n",
+      "{'Pikachu': 'Electric-type', 'Charizard': 'Fire-type', 'Blastoise': 'Water-type', 'Venusaur': 'Grass-type', 'Snorlax': 'Normal-type', 'Garchomp': 'Dragon-type', 'Lucario': 'Fighting-type', 'Darkrai': 'Dark-type', 'Arceus': 'Normal-type', 'Reshiram': 'Dragon-type', 'Articuno': 'Ice-type'}\n"]}],
+   'source': ['My_Dict = {\n',
+    '    "Pikachu": "Electric-type",\n',
+    '    "Charizard": "Fire-type",\n',
+    '    "Blastoise": "Water-type",\n',
+    '    "Venusaur": "Grass-type",\n',
+    '    "Snorlax": "Normal-type",\n',
+    '    "Garchomp": "Dragon-type",\n',
+    '    "Lucario": "Fighting-type",\n',
+    '    "Darkrai": "Dark-type",\n',
+    '    "Arceus": "Normal-type",\n',
+    '}\n',
+    'print(My_Dict)\n',
+    'My_Dict["Reshiram"] = "Dragon-type" #Added new key and value into dictionary\n',
+    'print(My_Dict)\n',
+    'My_Dict["Articuno"] = input()\n',
+    'print(My_Dict)\n']},
+  {'cell_type': 'markdown',
+   'metadata': {},
+   'source': ['## Python Quiz\n',
+    '\n',
+    'Making a qyuz that uses a list of dictionaries (InfoDb):']},
+  {'cell_type': 'code',
+   'execution_count': 11,
+   'metadata': {},
+   'outputs': [{'name': 'stdout',
+     'output_type': 'stream',
+     'text': ['Hello, you will be asked 5 short questions\n',
+      'Question: What is the answer to this math problem: What does 45x7=\n',
+      'Answer is correct\n',
+      'Question: What is the most popular religion in the world?\n',
+      'Answer is correct\n',
+      'Question: What is the capital of the U.S?\n',
+      'Answer is correct\n',
+      'Question: How many kg is in 5g?\n',
+      'Answer is correct\n',
+      'Question: How many mm are in 1 km?\n',
+      'Answer is incorrect\n',
+      'You scored 4/5\n']}],
+   'source': ['def Python_Quiz(prompt):\n',
+    '    global word\n',
+    '    print ("Question: " + prompt)\n',
+    '    word = input()\n',
+    '    return word\n',
+    '\n',
+    'questions_number = 5\n',
+    'correct_answer = 0\n',
+    '\n',
+    'print("Hello, you will be asked " + str(questions_number) + " short questions")\n',
+    '\n',
+    'My_Quiz = [{\n',
+    '    "What is the answer to this math problem: What does 45x7=": "315",\n',
+    '    "What is the most popular religion in the world?": "Christianity",\n',
+    '    "What is the capital of the U.S?": "Washington D.C.",\n',
+    '    "How many kg is in 5g?": "0.005 kg",\n',
+    '    "How many mm are in 1 km?": "1000000 mm",\n',
+    '}]\n',
+    '# My_Quiz.append({\n',
+    '#     "What is the answer to this math problem: What does 45x7=": "315",\n',
+    '#     "What is the most popular religion in the world?": "Christianity",\n',
+    '#     "What is the capital of the U.S?": "Washington D.C.",\n',
+    '#     "How many kg is in 5g?": "0.005 kg",\n',
+    '#     "How many mm are in 1 km?": "1000000 mm",\n',
+    '# })\n',
+    '\n',
+    'for dict in My_Quiz:\n',
+    '    for questions, answers in dict.items():\n',
+    '        Python_Quiz(questions)\n',
+    '        if word == answers:\n',
+    '            print("Answer is correct")\n',
+    '            correct_answer += 1\n',
+    '        else:\n',
+    '            print("Answer is incorrect")\n',
+    '\n',
+    'print("You scored " + str(correct_answer) + "/" + str(questions_number))\n']}],
+ 'metadata': {'kernelspec': {'display_name': 'Python 3.8.10 64-bit',
+   'language': 'python',
+   'name': 'python3'},
+  'language_info': {'codemirror_mode': {'name': 'ipython', 'version': 3},
+   'file_extension': '.py',
+   'mimetype': 'text/x-python',
+   'name': 'python',
+   'nbconvert_exporter': 'python',
+   'pygments_lexer': 'ipython3',
+   'version': '3.8.10'},
+  'orig_nbformat': 4,
+  'vscode': {'interpreter': {'hash': '916dbcbb3f70747c44a77c7bcd40155683ae19c65e1c03b4aa3499c5328201f1'}}},
+ 'nbformat': 4,
+ 'nbformat_minor': 2}</pre>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+    
+
+</div>
+
+
+
+  </div><a class="u-url" href="/APCSPwebPage/python_lists" hidden></a>
+</article>
+
+      </div>
+    </main><footer class="site-footer h-card">
+  <data class="u-url" href="/APCSPwebPage/"></data>
+
+  <div class="wrapper">
+
+    <div class="footer-col-wrapper">
+      <div class="footer-col">
+        <p class="feed-subscribe">
+          <a href="/APCSPwebPage/feed.xml">
+            <svg class="svg-icon orange">
+              <use xlink:href="/APCSPwebPage/assets/minima-social-icons.svg#rss"></use>
+            </svg><span>Subscribe</span>
+          </a>
+        </p>
+      </div>
+      <div class="footer-col">
+        <p>Ryan Hakimipour&#39;s blog</p>
+      </div>
+    </div>
+
+    <div class="social-links"><ul class="social-media-list"><li><a rel="me" href="https://github.com/fastai" target="_blank" title="fastai"><svg class="svg-icon grey"><use xlink:href="/APCSPwebPage/assets/minima-social-icons.svg#github"></use></svg></a></li><li><a rel="me" href="https://twitter.com/fastdotai" target="_blank" title="fastdotai"><svg class="svg-icon grey"><use xlink:href="/APCSPwebPage/assets/minima-social-icons.svg#twitter"></use></svg></a></li></ul>
+</div>
+
+  </div>
+
+</footer>
+</body>
+
+</html>
