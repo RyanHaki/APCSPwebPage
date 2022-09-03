@@ -2,7 +2,7 @@
 toc: true
 layout: post
 description: My first blog post.
-categories: [markdown, Week 0]
+categories: [markdown, Week_0]
 title: First Blog Post!
 ---
 
