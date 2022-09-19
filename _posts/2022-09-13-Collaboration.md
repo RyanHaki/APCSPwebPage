@@ -4,7 +4,6 @@ layout: post
 description: This is a post that has the notes for the Collegeboard videos on collaboration
 categories: [markdown, Week 4]
 title: Collegeboard Collaboration notes
-image: images/Fastpages-griffin.png
 ---
 
 ![]({{ site.baseurl }}/images/Fastpages-collaboration.png)
