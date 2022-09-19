@@ -4,6 +4,7 @@ layout: page
 title: Schedule
 ---
  Week | Topics | Review Ticket | Summary |
+|  | 
 | 4 | [Python Web Server Project](https://nighthawkcoders.github.io/APCSP//points/4) | [Hacks]() | In Progress |
 |  | []() | []() |  |
 |  | []() | []() |  |
