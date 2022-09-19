@@ -83,3 +83,11 @@ Think-Pair-Share
 This is the screenshot showing that I completed the Collegeboard Collaboration quiz.
 
 ![]({{ site.baseurl }}/images/collaborationquiz.PNG)
+
+---
+
+### Hack Questions
+Hack Questions
+1. My group setup is not strictly on the basis of current friends and common interests because we did not know each other before but now have become friends.
+2. My group setup is with diversity because we all have varying computer science levels. We have a diverse backgrounds: Puneri, Marathi, Persian, and mixed Hispanic.
+3. My group is best equipped for the skill sets needed for success in classrooms because we can work together very well.
