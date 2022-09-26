@@ -7,7 +7,6 @@ description: This program checks if a number is greater or less than a number.
 categories: [week5]
 ---
 
-{% include nav_javascript.html %}
 <html> 
 <head>
     <title>JavaScript program to calculate multiplication and division of two numbers </title>
