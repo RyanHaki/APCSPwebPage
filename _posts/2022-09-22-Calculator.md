@@ -18,7 +18,7 @@ categories: [week5]
 <body>
 
 <form>
-    <h1>Here is a simple calculator made by Sophia Tang!</h1>
+    <h1>Here is a simple calculator made by Ryan Hakimipour!</h1>
     <mark>Enter two numbers in the following boxes, and then you can perform calculations :)<br></mark>
     1st Number: <input type="text" id="firstNumber" /><br>
     2nd Number: <input type="text" id="secondNumber" /><br>
