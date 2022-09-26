@@ -204,6 +204,17 @@
 
   
       ,"page3": {
+          "title": "Submenu",
+          "content": "&lt;!DOCTYPE html&gt; . . Javascript Post Notebook Contact .",
+          "url": "https://ryanhaki.github.io/APCSPwebPage/_pages/Javascript.html",
+          "relUrl": "/_pages/Javascript.html",
+          "date": ""
+      }
+      
+  
+
+  
+      ,"page4": {
           "title": "Ap World History",
           "content": "World Map . . World Religions . World Religions worldwide and percentages of the world population . World Religions Percentage of World Population . Christianity | 31.7% | . Islam | 25% | . Hinduism | 15% | . Buddhism | 6.6% | . .",
           "url": "https://ryanhaki.github.io/APCSPwebPage/_pages/OtherSubject.html",
@@ -214,7 +225,7 @@
   
 
   
-      ,"page4": {
+      ,"page5": {
           "title": "About Me",
           "content": ". Ryan Hakimipour [^1] is a high school student who has created this fastpage as a part of AP Computer Science Principals. .",
           "url": "https://ryanhaki.github.io/APCSPwebPage/about/",
@@ -227,7 +238,7 @@
   
 
   
-      ,"page6": {
+      ,"page7": {
           "title": "Notes",
           "content": "Notes/Important takeaways . Week 0 - I learned how to install all the software required for coding, and basics of VSCode and Github. I also learned how to link jupyter notebooks to my blog. . Week 1 - This week I learned how to personalize my blog. I decided to make my blog themed after the color orange since it my favorite color. I have also applied the lessons of how to insert images. I also learned how to use bash, and some basics of bash. .",
           "url": "https://ryanhaki.github.io/APCSPwebPage/Notes/",
@@ -238,7 +249,7 @@
   
 
   
-      ,"page7": {
+      ,"page8": {
           "title": "Schedule",
           "content": "Week | Topics | Review Ticket | Summary | . 4 | Python Web Server Project | Hacks |   | .   | | |   | .   | | |   | .   | | |   | . Week | Topics | Review Ticket | Summary | . 0 | Tool Setup | Hacks | I learned how to install all the software required for coding, and basics of VSCode and Github. I also learned how to link Jupyter Notebooks to my blog. | . 1 | Intro to Python | Hacks | This week taught me how to personalize my blog. I also learned how to use bash, and some basics of bash while creating a bash script in Jupyter Notebooks. | . 2 | Data Abstraction | Hacks | We started to work with lists and dictionaries in Python. I learned how to append stuff to a dictionary, and how to use for loops and recursive loops to search through them. I created a second python quiz, this time using a dictionary to store the questions. We also worked on using HTML to customize our blogs. I was able to temporarily change the remote theme of my blog, as well as create a table to store everything we have done so far. | . 3 | Creative Development | Hacks | This week I made a Quiz about Among Us with block coding. But it has taught me how blog about it and to use it to summarize my ideas that went into making the code. Also writing about some of my challenges that I faced when using the block coding and how I could improve my code. | .",
           "url": "https://ryanhaki.github.io/APCSPwebPage/_pages/schedule.html",
@@ -270,7 +281,7 @@
   
 
   
-      ,"page16": {
+      ,"page17": {
           "title": "",
           "content": "Sitemap: {{ “sitemap.xml” | absolute_url }} | .",
           "url": "https://ryanhaki.github.io/APCSPwebPage/robots.txt",
