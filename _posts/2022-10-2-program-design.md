@@ -84,7 +84,7 @@ Documentation throughout can improve:
 ### Collegeboard quiz results
 This is the screenshot of the results of the quiz I took on Collegeboard
 
-![]({{ site.baseurl }}/images/Fastpages-collegeboard-design.png)
+![]({{ site.baseurl }}/images/programdesign.PNG)
 
 ---
 
