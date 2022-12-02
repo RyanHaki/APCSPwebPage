@@ -180,9 +180,13 @@ window.onload = wrap_img;
      <span class="p">),</span>
 <span class="p">]</span>
 
-<span class="n">album</span> <span class="o">=</span> <span class="nb">input</span><span class="p">()</span>
-<span class="n">song</span> <span class="o">=</span> <span class="nb">input</span><span class="p">()</span>
-<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">"Now Playing: </span><span class="se">\"</span><span class="si">{</span><span class="n">albums</span><span class="p">[</span><span class="nb">int</span><span class="p">(</span><span class="n">album</span><span class="p">)</span><span class="o">-</span><span class="mi">1</span><span class="p">][</span><span class="mi">3</span><span class="p">][</span><span class="nb">int</span><span class="p">(</span><span class="n">song</span><span class="p">)</span><span class="o">-</span><span class="mi">1</span><span class="p">][</span><span class="mi">1</span><span class="p">]</span><span class="si">}</span><span class="se">\"</span><span class="s2">"</span><span class="p">)</span>
+<span class="n">album</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="nb">input</span><span class="p">(</span><span class="s1">'Choose an Album:'</span><span class="p">))</span> <span class="o">-</span> <span class="mi">1</span>
+<span class="n">song</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="nb">input</span><span class="p">(</span><span class="s1">'Choose a Song:'</span><span class="p">))</span> <span class="o">-</span> <span class="mi">1</span>
+<span class="n">choice_album</span> <span class="o">=</span> <span class="nb">str</span><span class="p">(</span><span class="n">albums</span><span class="p">[</span><span class="n">album</span><span class="p">][</span><span class="mi">0</span><span class="p">])</span>
+<span class="n">choice_band</span> <span class="o">=</span> <span class="nb">str</span><span class="p">(</span><span class="n">albums</span><span class="p">[</span><span class="n">album</span><span class="p">][</span><span class="mi">1</span><span class="p">])</span>
+<span class="n">choice_year</span> <span class="o">=</span> <span class="nb">str</span><span class="p">(</span><span class="n">albums</span><span class="p">[</span><span class="n">album</span><span class="p">][</span><span class="mi">2</span><span class="p">])</span>
+<span class="n">choice_song</span> <span class="o">=</span> <span class="nb">str</span><span class="p">(</span><span class="n">albums</span><span class="p">[</span><span class="n">album</span><span class="p">][</span><span class="mi">3</span><span class="p">][</span><span class="n">song</span><span class="p">][</span><span class="mi">1</span><span class="p">])</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">"Playing "</span> <span class="o">+</span> <span class="n">choice_song</span> <span class="o">+</span> <span class="s2">" from "</span> <span class="o">+</span> <span class="n">choice_album</span> <span class="o">+</span> <span class="s2">" by "</span> <span class="o">+</span> <span class="n">choice_band</span> <span class="o">+</span> <span class="s2">" in "</span> <span class="o">+</span> <span class="n">choice_year</span><span class="p">)</span>
 </pre></div>
 
     </div>
