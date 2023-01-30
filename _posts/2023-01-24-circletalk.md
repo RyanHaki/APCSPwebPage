@@ -3,7 +3,6 @@ toc: true
 comments: true
 title: Circle Talks
 layout: post
-description: Extra credit
 categories: [week19]
 ---
 Come up with three of your own Beneficial and corresponding Harmful Effects of Computing
