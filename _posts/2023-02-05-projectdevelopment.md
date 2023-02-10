@@ -43,10 +43,10 @@ Each person in our group will be making a food themed game that follows the CPT 
 ## Code Plan
 
 My tic tac toe game will be coded using HTML/CSS/Python/JavaScript
-    1. The User will be on a Log in screen
-    2. Then they will be on the actual game
-    3. The user can play against a random guest that data wont be saved
-    4. Their score will be saved and be displayed later.
+- The User will be on a Log in screen
+- Then they will be on the actual game
+- The user can play against a random guest that data wont be saved
+- Their score will be saved and be displayed later.
 
 ## Video Plan
 
