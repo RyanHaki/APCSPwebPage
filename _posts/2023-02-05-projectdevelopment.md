@@ -3,33 +3,51 @@ toc: true
 comments: true
 title: Project Development
 layout: post
-categories: [week21]
+categories: [week22]
 ---
 
-## Group Project Contributions.
----
+## Overview
 
-During this week we have done some thinking of how we were going to be able to achieve our goal and have came to a new conclusion that we each should start working on separate programs that have a common theme instead of all us working on one main program.
+What I'm creating for my cpt project will be a tic tac toe game that will be food themed. This will be a place where users can test their tic tac toe skills.
 
-### What I have done this week.
+## Purpose and Function
 
-For my portion of the project I have decided on working on a tic tac toe game that will be food themed. 
+The Purpose is a fun yet competetive way for users to play tic tac toe. Function will be a regular game of tic tac toe that will saves the users score to be able for them to compete against fellow users. The user and user score will be saves in a database that countains the users name and their score that they achieved.
 
-### What I've done.
+## Data Abstraction
 
-I've created the backend portion of my project and a test frontend on the same flask server and I used an extension called live server to test my game. So far I got the basics of the game working where it can detect weather if X or O won or if they ended in a Draw. I used css to style the game and got to a point where I feel comfortable on how it looks at performs.
+In the Tic Tac Toe game example, data abstraction is achieved by the separation of the backend and the frontend.
 
-![]({{ site.baseurl }}/images/Screenshot 2023-02-05 at 3.40.02 PM.png)
+In the backend, the game state is stored as a two-dimensional list and the implementation details of how the game state is updated are hidden from the frontend. The frontend only interacts with the backend through a well-defined API endpoint, /game, which allows it to retrieve the current game state and make updates to the game state. The frontend does not have access to the underlying implementation of how the game state is stored or updated in the backend.
 
-![]({{ site.baseurl }}/images/Screenshot 2023-02-05 at 3.40.15 PM.png)
+## Managing Complexity
 
-![]({{ site.baseurl }}/images/Screenshot 2023-02-05 at 3.40.39 PM.png)
+The Tic Tac Toe code shows Managing Complexity by separating the backend and frontend and only allowing communication through a well-defined API. This reduces the interdependence of different components and improves maintainability, scalability, and stability by reducing the complexity of the system.
 
----
-## What I still need to work on.
----
-1. I still need make it so the backend of my code will be on a flask server and my frontend to be on our fastpage. But for that to happen I want our groups aws instance to be up and running.
+## Procedural Abstraction
 
-2. I need to create a database where it can keep track of the games score which gets refreshed after the user is done playing the game.
+The code shows procedural abstraction by encapsulating the implementation details of the game state update logic in the backend, and only exposing the essential information through a well-defined API endpoint. This allows the frontend to interact with the backend in a procedural manner, making updates to the game state without having to be aware of the underlying implementation details.
 
-3. I also need to figure out how I'm going to make the project food themed so it matches the rest of our groups project.
+## Algorithmic Implementation
+
+The code shows algorithmic implementation through the game state update logic in the backend. This logic determines how the game state is updated based on the input received from the frontend and implements the rules of the Tic Tac Toe game. The algorithmic implementation of the game state update is a key part of the overall functioning of the Tic Tac Toe game and allows for a consistent and accurate representation of the game state.
+
+## Testing
+
+I can manualy test using tools like Postman to make API calls to the backend and verify that the correct responses are received.
+
+## Create Performance Task
+
+Each person in our group will be making a food themed game that follows the CPT rubric. These will all be incorparted together into our N@TM project where users can play the different games.
+
+## Code Plan
+
+My tic tac toe game will be coded using HTML/CSS/Python/JavaScript
+    1. The User will be on a Log in screen
+    2. Then they will be on the actual game
+    3. The user can play against a random guest that data wont be saved
+    4. Their score will be saved and be displayed later.
+
+## Video Plan
+
+For the Video I plan to go through the my whole game and show how it will saves the users data. Finally, I would sign and play through a game of tic tac toe and show how the users score will be saved.
