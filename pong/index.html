@@ -4,20 +4,20 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="twitter:card" content="summary_large_image" /><!-- Begin Jekyll SEO tag v2.8.0 -->
-<title>Comp-Sci Journey | Ryan Hakimipour</title>
+<title>Pong | Ryan Hakimipour</title>
 <meta name="generator" content="Jekyll v4.1.1" />
-<meta property="og:title" content="Comp-Sci Journey" />
+<meta property="og:title" content="Pong" />
 <meta property="og:locale" content="en_US" />
 <meta name="description" content="Ryan Hakimipour’s blog" />
 <meta property="og:description" content="Ryan Hakimipour’s blog" />
-<link rel="canonical" href="https://ryanhaki.github.io/APCSPwebPage/MyJourney/" />
-<meta property="og:url" content="https://ryanhaki.github.io/APCSPwebPage/MyJourney/" />
+<link rel="canonical" href="https://ryanhaki.github.io/APCSPwebPage/pong/" />
+<meta property="og:url" content="https://ryanhaki.github.io/APCSPwebPage/pong/" />
 <meta property="og:site_name" content="Ryan Hakimipour" />
 <meta property="og:type" content="website" />
 <meta name="twitter:card" content="summary" />
-<meta property="twitter:title" content="Comp-Sci Journey" />
+<meta property="twitter:title" content="Pong" />
 <script type="application/ld+json">
-{"@context":"https://schema.org","@type":"WebPage","description":"Ryan Hakimipour’s blog","headline":"Comp-Sci Journey","url":"https://ryanhaki.github.io/APCSPwebPage/MyJourney/"}</script>
+{"@context":"https://schema.org","@type":"WebPage","description":"Ryan Hakimipour’s blog","headline":"Pong","url":"https://ryanhaki.github.io/APCSPwebPage/pong/"}</script>
 <!-- End Jekyll SEO tag -->
 <link rel="stylesheet" href="/APCSPwebPage/assets/css/style.css"><link type="application/atom+xml" rel="alternate" href="https://ryanhaki.github.io/APCSPwebPage/feed.xml" title="Ryan Hakimipour" /><link rel="shortcut icon" type="image/x-icon" href="/APCSPwebPage/images/favicon.ico"><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Primer/15.2.0/primer.css" integrity="sha512-xTz2ys4coGAOz8vuV1NcQBkgVmKhsSEtjbqyMJbBHRplFuvKIUo6xhLHpAyPt9mfR6twHJgn9OgVLuqOvjeBhg==" crossorigin="anonymous" />
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css" integrity="sha512-1PKOgIY59xJ8Co8+NE6FZ+LOAZKjy+KY8iq0G4B3CyeY6wYHN3yt9PW0XpSriVlkMXe40PTKnXrLnZ9+fkDaog==" crossorigin="anonymous" />
@@ -69,19 +69,183 @@ window.onload = wrap_img;
 </header>
 <main class="page-content" aria-label="Content">
       <div class="wrapper">
-        <article class="post">
+        <article class="post h-entry" itemscope itemtype="http://schema.org/BlogPosting">
 
   <header class="post-header">
-    <h1 class="post-title">Comp-Sci Journey</h1>
-  </header>
+    <h1 class="post-title p-name" itemprop="name headline">Pong</h1><p class="post-meta post-meta-title"><time class="dt-published" datetime="" itemprop="datePublished">
+        
+      </time>
+       • <span class="read-time" title="Estimated read time">
+    
+    
+      1 min read
+    
+</span></p>
 
-  <div class="post-content">
-    <h1 id="my-computer-science-journey">My Computer Science Journey</h1>
+    
 
-<p>I began my coding journey in 7th grade in GTT. We would use block coding for a very basic understanding of coding. Then for the next 3 years I didn’t really have anymore experince with coding but I did have a lot of personal experince working with computers. I major hobby that I had found for myself was building computers and understanding how they worked. This hobby has now led me to the understanding of the software side of how computers work which has led me to taking this class. So far in this class I’ve leanned lots of new things, such as inclunding how to set up my own perosnal blog.</p>
+    </header>
 
-  </div>
+  <div class="post-content e-content" itemprop="articleBody">
+    <!doctype html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<style>
+	canvas {
+		display: block;
+		position: absolute;
+		margin: auto;
+		top: 0;
+		bottom: 120px;
+		left: 0;
+		right: 0;
+		border: 8px double rgb(132, 0, 209);
+	}
+	</style>
+</head>
+<body style="background-image: repeating-conic-gradient(rgb(11, 141, 24) 10%, rgb(255, 77, 0) 20%);">
 
+<script>
+var WIDTH = 900,
+    HEIGHT = 380,
+    pi = Math.PI,
+    UKey = 38,
+    DKey = 40,
+    WKey = 87,
+    SKey = 83,
+    canvas,
+    ctx,
+    bong,
+    score = {
+      donger: 0,
+      dude: 0
+    },
+    updateScore = function() {
+      if (holygrace.x - holygrace.side < 0) {
+        score.dude++;
+      } else if (holygrace.x + holygrace.side > WIDTH) {
+        score.donger++;
+      }
+    },
+    drawScore = function() {
+      ctx.fillText("Donger: " + score.donger, WIDTH/2 - 100, 40);
+      ctx.fillText("Dude: " + score.dude, WIDTH/2 + 50, 40);
+    },
+    reset = function() {
+      donger.x = 0;
+      donger.y = HEIGHT/2 - donger.height/2;
+
+      dude.x = WIDTH - dude.width;
+      dude.y = HEIGHT/2 - dude.height/2;
+
+      holygrace.serve(Math.random() > 0.5 ? 1 : -1);
+    },
+    step = function() {
+      update();
+      draw();
+      window.requestAnimationFrame(step);
+    },
+    update = function() {
+      updateScore();
+      donger.update();
+      dude.update();
+      holygrace.update();
+
+      if (score.donger >= 10 || score.dude >= 10) {
+        reset();
+      }
+    },
+    draw = function() {
+      ctx.clearRect(0, 0, WIDTH, HEIGHT);
+      drawScore();
+      donger.draw();
+      dude.draw();
+      holygrace.draw();
+    };
+
+var donger = {
+  width: 20,
+  height: 100,
+  update: function() {
+    if (bong[WKey]) this.y -= 7;
+    if (bong[SKey]) this.y += 7;
+    this.y = Math.max(Math.min(this.y, HEIGHT - this.height), 0);
+  },
+  draw: function() {
+    ctx.fillRect(this.x, this.y, this.width, this.height);
+  }
+};
+
+var dude = {
+width: 20,
+height: 100,
+update: function() {
+if (bong[UKey]) this.y -= 7;
+if (bong[DKey]) this.y += 7;
+this.y = Math.max(Math.min(this.y, HEIGHT - this.height), 0);
+},
+draw: function() {
+ctx.fillRect(this.x, this.y, this.width, this.height);
+}
+};
+
+var holygrace = {
+side: 20,
+x: WIDTH/2,
+y: HEIGHT/2,
+velocity: 8,
+serve: function(side) {
+this.velocity = side * 8;
+this.y = HEIGHT/2;
+},
+update: function() {
+this.x += this.velocity;
+if (this.x - this.side < donger.x + donger.width &&
+this.y >= donger.y && this.y <= donger.y + donger.height) {
+this.velocity = -this.velocity;
+} else if (this.x + this.side > dude.x &&
+this.y >= dude.y && this.y <= dude.y + dude.height) {
+this.velocity = -this.velocity;
+}
+
+if (this.y - this.side < 0 || this.y + this.side > HEIGHT) {
+  this.velocity *= -1;
+}
+
+},
+draw: function() {
+ctx.beginPath();
+ctx.arc(this.x, this.y, this.side, 0, 2*pi);
+ctx.fill();
+}
+};
+
+window.onload = function() {
+canvas = document.createElement("canvas");
+canvas.width = WIDTH;
+canvas.height = HEIGHT;
+document.body.appendChild(canvas);
+
+ctx = canvas.getContext("2d");
+ctx.fillStyle = "white";
+
+bong = [];
+document.addEventListener("keydown", function(e) {
+bong[e.keyCode] = true;
+});
+document.addEventListener("keyup", function(e) {
+bong[e.keyCode] = false;
+});
+
+reset();
+step();
+};
+
+</script>
+</body>
+</html>
+  </div><a class="u-url" href="/APCSPwebPage/pong/" hidden></a>
 </article>
 
       </div>
