@@ -608,20 +608,9 @@
 
   
   
-      ,"page0": {
-          "title": "Pong",
-          "content": "&lt;!doctype html&gt; . .",
-          "url": "https://ryanhaki.github.io/APCSPwebPage/pong/",
-          "relUrl": "/pong/",
-          "date": ""
-      }
-      
-  
 
   
-
-  
-      ,"page2": {
+      ,"page1": {
           "title": "Collegeboard",
           "content": "Video Notes Submenu . . My Collegeboard Notes 1.1 Collaboration | 1.2 Program Function and Purpose&lt;/td&gt; 1.3 Program Design and Development | 1.4 Identifying and Correcting Errors | &lt;/tr&gt; &lt;/table&gt; | .",
           "url": "https://ryanhaki.github.io/APCSPwebPage/Collegeboard/",
@@ -632,7 +621,7 @@
   
 
   
-      ,"page3": {
+      ,"page2": {
           "title": "Comp-Sci Journey",
           "content": "My Computer Science Journey . I began my coding journey in 7th grade in GTT. We would use block coding for a very basic understanding of coding. Then for the next 3 years I didn’t really have anymore experince with coding but I did have a lot of personal experince working with computers. I major hobby that I had found for myself was building computers and understanding how they worked. This hobby has now led me to the understanding of the software side of how computers work which has led me to taking this class. So far in this class I’ve leanned lots of new things, such as inclunding how to set up my own perosnal blog. .",
           "url": "https://ryanhaki.github.io/APCSPwebPage/MyJourney/",
@@ -643,7 +632,7 @@
   
 
   
-      ,"page4": {
+      ,"page3": {
           "title": "Ap World History",
           "content": "World Map . . World Religions . World Religions worldwide and percentages of the world population . World Religions Percentage of World Population . Christianity | 31.7% | . Islam | 25% | . Hinduism | 15% | . Buddhism | 6.6% | . .",
           "url": "https://ryanhaki.github.io/APCSPwebPage/_pages/OtherSubject.html",
@@ -654,7 +643,7 @@
   
 
   
-      ,"page5": {
+      ,"page4": {
           "title": "About Me",
           "content": ". Ryan Hakimipour [^1] is a high school student who has created this fastpage as a part of AP Computer Science Principals. .",
           "url": "https://ryanhaki.github.io/APCSPwebPage/about/",
@@ -695,7 +684,7 @@
   
 
   
-      ,"page18": {
+      ,"page17": {
           "title": "",
           "content": "Sitemap: {{ “sitemap.xml” | absolute_url }} | .",
           "url": "https://ryanhaki.github.io/APCSPwebPage/robots.txt",
