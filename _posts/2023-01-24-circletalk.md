@@ -49,3 +49,45 @@ It would be beneficial to receive feedback on the games featured on our website 
 - What about Del Norte crowdsourcing? Could your project be better with crowdsourcing?
 
 Testing the Reviews and Events databases with a diverse group of students would be beneficial as it would provide more robust testing for their filtering and validation systems with a higher volume of entries. If we were to enlist a significant number of Del Norte students to contribute events and reviews to the site, we would have a stronger foundation to build upon. However, this approach would also come with the potential risk of an increase in spam.
+
+## 5.5
+### Notes
+- Creating a repository on GitHub requires selection of a license type.
+-  There are many lawyers who specialize in patents.
+- Qualcomm seeks compensation for derivative works and demands a royalty fee for the use of patents and ideas.
+- Using software under the GPL license may result in the loss of the ability to charge for the software and related patents.
+- The GPL open source license requires that any derivative work must be free and the code must be shared.
+- The cost of using software under the GPL license may be higher than expected due to the loss of the right to charge for the software and patents.
+- Open source licenses like the GPL have clear guidelines for sharing and distributing derivative works.
+- Companies such as Qualcomm strive to receive reimbursement for the usage of their patents and ideas, even in the context of open source software.
+
+## Creative Commons Zero v1.0 Universal
+
+The Creative Commons CC0 Public Domain Dedication waives all copyright claims on a work you have created, making it accessible to the public globally.
+
+## Open Source MIT License
+
+The MIT License permits the unrestricted use of code and the production and distribution of proprietary versions. Typically, the software author under the MIT License desires recognition, which can be as simple as including their name in the comments. Proprietary projects can be kept confidential on GitHub.
+
+## 5.6
+
+### Notes
+
+- Personal Identifiable Information (PII) refers to information that can identify a person.
+- This information can be easily obtained through social media, online searches, and other online activities.
+- It is important to be mindful of the information shared online, as it can be easily accessible by others.
+- Confidential information such as financial credentials, two-factor authentication codes, and social security numbers should be kept private.
+- Multi-factor authentication and biometric methods can increase the security of your systems.
+- Both Symmetric and Asymmetric Encryption can also boost the security of your systems.
+- Phishing and malware attacks pose a threat to the security of your PII.
+- Regularly reviewing your PII vulnerabilities and taking measures to protect your information is crucial.
+
+1) Personal Identifiable Information (PII) encompasses details that can identify a person, such as their name, social security number, date of birth, address, or phone number. Websites, apps, and organizations often gather and store PII in the field of computer science. In a project I encountered, PII was gathered from users through the registration process and utilized to customize their website experience.
+
+2) The revelation of PII can lead to severe consequences for individuals, including identity theft, financial fraud, and privacy breaches. Hence, it is crucial for organizations to securely manage and protect PII to prevent such incidents from taking place. Strong passwords are usually lengthy, complex, and unpredictable, making them challenging to guess or crack. In contrast, weak passwords are short, easily predictable, or frequently used. Two-factor authentication (2FA) can also be used to enhance authentication by requiring two forms of identification, such as something you know (such as a password) and something you possess (such as a smartphone), to access an account.
+
+3) Symmetric encryption is a technique where a single key is employed for both encryption and decryption. As a result, both the sender and receiver of the encrypted message must have access to the identical key for secure communication. Conversely, asymmetric encryption utilizes two distinct keys: one for encryption and another for decryption. This allows for secure communication between parties without the need for pre-exchanging the key.
+
+4) An instance of encryption utilized in AWS deployment is the implementation of Secure Sockets Layer (SSL) certificates, which encrypt the communication between a user's browser and a website to protect against eavesdropping and tampering.
+
+5)  To date, I have not fallen victim to any phishing scams. One type of phishing scam I am aware of involves an attacker sending an email that appears to come from a trusted source, such as a bank or e-commerce site, and requesting the recipient to click on a link or provide confidential information. Another popular phishing method involves creating a fake login page that mimics a legitimate website to deceive the user into entering their username and password. Additionally, phishing can also be carried out through malicious attachments.
