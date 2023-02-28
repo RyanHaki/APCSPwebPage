@@ -8,46 +8,43 @@ categories: [week22]
 
 ## Overview
 
-What I'm creating for my cpt project will be a tic tac toe game that will be food themed. This will be a place where users can test their tic tac toe skills.
+What I'm creating for my cpt project will be a recipe finder where users can type a key word and find a recipe that they desire.
 
 ## Purpose and Function
 
-The Purpose is a fun yet competetive way for users to play tic tac toe. Function will be a regular game of tic tac toe that will saves the users score to be able for them to compete against fellow users. The user and user score will be saves in a database that countains the users name and their score that they achieved.
-
+The purpose and the function of this is for users to be able to search any recipe that they like and to be able to find what they want and be givin directions on how to cook the recipe.
 ## Data Abstraction
 
-In the Tic Tac Toe game example, data abstraction is achieved by the separation of the backend and the frontend.
-
-In the backend, the game state is stored as a two-dimensional list and the implementation details of how the game state is updated are hidden from the frontend. The frontend only interacts with the backend through a well-defined API endpoint, /game, which allows it to retrieve the current game state and make updates to the game state. The frontend does not have access to the underlying implementation of how the game state is stored or updated in the backend.
+The function abstracts these details by simply taking an item name as input, and returning a list of dictionaries that represent the search results for that item. The caller of the function does not need to know the implementation details of how the API is accessed, what query parameters are needed, or how the returned data is formatted, it just needs to know the input and output format of the function.
 
 ## Managing Complexity
 
-The Tic Tac Toe code shows Managing Complexity by separating the backend and frontend and only allowing communication through a well-defined API. This reduces the interdependence of different components and improves maintainability, scalability, and stability by reducing the complexity of the system.
+The code will divided into smaller modules or functions, such as searchItem function, which is responsible for searching an item in the database and returning a list of results.
 
 ## Procedural Abstraction
 
-The code shows procedural abstraction by encapsulating the implementation details of the game state update logic in the backend, and only exposing the essential information through a well-defined API endpoint. This allows the frontend to interact with the backend in a procedural manner, making updates to the game state without having to be aware of the underlying implementation details.
+It takes an input item and performs a search on a remote API to retrieve recipe information for that item. The function abstracts away the details of the API request and response handling by encapsulating it in a single function, allowing the user of the function to focus on the task at hand (i.e., searching for recipes) without worrying about the low-level implementation details.
 
 ## Algorithmic Implementation
 
-The code shows algorithmic implementation through the game state update logic in the backend. This logic determines how the game state is updated based on the input received from the frontend and implements the rules of the Tic Tac Toe game. The algorithmic implementation of the game state update is a key part of the overall functioning of the Tic Tac Toe game and allows for a consistent and accurate representation of the game state.
-
+The code will provide a complete implementation of a search API that uses an external API service to retrieve data, parse the data, and return the results in a JSON format.
 ## Testing
 
 I can manualy test using tools like Postman to make API calls to the backend and verify that the correct responses are received.
 
 ## Create Performance Task
 
-Each person in our group will be making a food themed game that follows the CPT rubric. These will all be incorparted together into our N@TM project where users can play the different games.
+Each person in our group will be making a food themed game/feature that follows the CPT rubric. These will all be incorparted together into our N@TM project where users can play the different games and surf through other sites.
 
 ## Code Plan
 
 My tic tac toe game will be coded using HTML/CSS/Python/JavaScript
 - The User will be on a Log in screen
-- Then they will be on the actual game
-- The user can play against a random guest that data wont be saved
-- Their score will be saved and be displayed later.
+- Then they will be taken to the rest of the website where they can go to the recipe search
+- The recipe finder will only work if users are logged in
+- Users will later be able to log out once their done with their searching.
+- The account will be saved for later use.
 
 ## Video Plan
 
-For the Video I plan to go through the my whole game and show how it will saves the users data. Finally, I would sign and play through a game of tic tac toe and show how the users score will be saved.
+For the Video I plan to go through the my whole site and show how it will saves the users data. Finally, I would sign and go through my website and be able to search any recipe and then be able to log out.
