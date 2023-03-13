@@ -1,7 +1,6 @@
 ---
 toc: true
 layout: post
-categories: [markdown, Week25]
 title: AP CSP Tri 2 Final MCQ
 ---
 
