@@ -3,6 +3,7 @@ toc: true
 layout: post
 categories: [Week 28]
 title: MCQ#4 Reflection 
+permalink: /mcq4
 ---
 
 ## My Score
