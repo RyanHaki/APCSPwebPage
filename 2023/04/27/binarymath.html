@@ -79,7 +79,7 @@ window.onload = wrap_img;
        • <span class="read-time" title="Estimated read time">
     
     
-      2 min read
+      4 min read
     
 </span></p>
 
@@ -202,25 +202,6 @@ window.onload = wrap_img;
 </div>
 </div>
 </div>
-<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<h2 id="Logic-Gates">Logic Gates<a class="anchor-link" href="#Logic-Gates"> </a></h2><ol>
-<li><p>Logic gates are used to perform basic Boolean operations such as AND, OR, and NOT, which are the building blocks of more complex digital circuits that form the basis of modern computer functions.</p>
-</li>
-<li><p>Boolean operations refer to the logical operations that can be performed on Boolean values, such as AND, OR, and NOT, while logic gates are physical electronic components that implement these Boolean operations in digital circuits.</p>
-</li>
-</ol>
-
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<h2 id="Fetching">Fetching<a class="anchor-link" href="#Fetching"> </a></h2><p>One hosting service website that is different from Github Pages is Netlify. One advantage of Netlify is that it provides continuous deployment, which means that your website is automatically built and deployed whenever you push changes to your Git repository. This makes it very easy to iterate quickly and deploy changes frequently, without having to worry about the deployment process. Additionally, Netlify provides a lot of other features such as custom domain support, SSL encryption, and forms handling, making it a great choice for static website hosting.</p>
-
-</div>
-</div>
-</div>
     
     
 <div class="cell border-box-sizing code_cell rendered">
@@ -229,37 +210,43 @@ window.onload = wrap_img;
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="nn">pd</span>
-<span class="kn">import</span> <span class="nn">requests</span>
 
-<span class="n">url</span> <span class="o">=</span> <span class="s2">&quot;https://spoonacular-recipe-food-nutrition-v1.p.rapidapi.com/recipes/complexSearch&quot;</span>
+<span class="c1"># Load data from CSV file into a pandas DataFrame</span>
+<span class="n">df</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="s1">&#39;random_numbers_1000.csv&#39;</span><span class="p">)</span>
 
-<span class="n">headers</span> <span class="o">=</span> <span class="p">{</span>
-    <span class="s2">&quot;content-type&quot;</span><span class="p">:</span> <span class="s2">&quot;application/octet-stream&quot;</span><span class="p">,</span>
-    <span class="s2">&quot;X-RapidAPI-Key&quot;</span><span class="p">:</span> <span class="s2">&quot;32d5282f94msh36a081cfb06e672p1c2a8cjsn851d00873829&quot;</span><span class="p">,</span>
-    <span class="s2">&quot;X-RapidAPI-Host&quot;</span><span class="p">:</span> <span class="s2">&quot;spoonacular-recipe-food-nutrition-v1.p.rapidapi.com&quot;</span>
-<span class="p">}</span>
+<span class="c1"># Calculate the mean of the data</span>
+<span class="n">mean</span> <span class="o">=</span> <span class="n">df</span><span class="p">[</span><span class="s1">&#39;number&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">mean</span><span class="p">()</span>
 
-<span class="c1"># Example query parameters</span>
-<span class="n">querystring</span> <span class="o">=</span> <span class="p">{</span>
-    <span class="s2">&quot;query&quot;</span><span class="p">:</span> <span class="s2">&quot;chicken&quot;</span><span class="p">,</span>
-    <span class="s2">&quot;number&quot;</span><span class="p">:</span> <span class="mi">5</span>
-<span class="p">}</span>
+<span class="c1"># Print the mean</span>
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;The mean of the data is </span><span class="si">{</span><span class="n">mean</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
 
-<span class="n">response</span> <span class="o">=</span> <span class="n">requests</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="n">url</span><span class="p">,</span> <span class="n">headers</span><span class="o">=</span><span class="n">headers</span><span class="p">,</span> <span class="n">params</span><span class="o">=</span><span class="n">querystring</span><span class="p">)</span>
+<span class="c1"># Initialize a variable to keep track of the sum of the filtered data</span>
+<span class="n">filtered_sum</span> <span class="o">=</span> <span class="mi">0</span>
 
-<span class="c1"># Check the structure of the response data</span>
-<span class="nb">print</span><span class="p">(</span><span class="n">response</span><span class="o">.</span><span class="n">json</span><span class="p">())</span>
+<span class="c1"># Initialize a variable to keep track of the count of numbers that meet the first criteria</span>
+<span class="n">count</span> <span class="o">=</span> <span class="mi">0</span>
 
-<span class="c1"># Access the correct data in the response</span>
-<span class="k">if</span> <span class="s2">&quot;results&quot;</span> <span class="ow">in</span> <span class="n">response</span><span class="o">.</span><span class="n">json</span><span class="p">():</span>
-    <span class="n">data</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">json_normalize</span><span class="p">(</span><span class="n">response</span><span class="o">.</span><span class="n">json</span><span class="p">()[</span><span class="s2">&quot;results&quot;</span><span class="p">])</span>
-<span class="k">elif</span> <span class="s2">&quot;data&quot;</span> <span class="ow">in</span> <span class="n">response</span><span class="o">.</span><span class="n">json</span><span class="p">():</span>
-    <span class="n">data</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">json_normalize</span><span class="p">(</span><span class="n">response</span><span class="o">.</span><span class="n">json</span><span class="p">()[</span><span class="s2">&quot;data&quot;</span><span class="p">])</span>
+<span class="c1"># Iterate over the data</span>
+<span class="k">for</span> <span class="n">num</span> <span class="ow">in</span> <span class="n">df</span><span class="p">[</span><span class="s1">&#39;number&#39;</span><span class="p">]:</span>
+    <span class="k">if</span> <span class="n">num</span> <span class="o">%</span> <span class="mi">2</span> <span class="o">!=</span> <span class="mi">0</span><span class="p">:</span> <span class="c1"># If the number is odd, skip it</span>
+        <span class="k">continue</span>
+    <span class="k">elif</span> <span class="n">num</span> <span class="o">%</span> <span class="mi">5</span> <span class="o">==</span> <span class="mi">0</span><span class="p">:</span> <span class="c1"># If the number is divisible by 5, multiply it by 2</span>
+        <span class="n">num</span> <span class="o">*=</span> <span class="mi">2</span>
+    <span class="k">else</span><span class="p">:</span> <span class="c1"># Otherwise, keep the number the same</span>
+        <span class="k">pass</span>
+    
+    <span class="n">filtered_sum</span> <span class="o">+=</span> <span class="n">num</span> <span class="c1"># Add the number to the sum</span>
+    <span class="n">count</span> <span class="o">+=</span> <span class="mi">1</span> <span class="c1"># Increment the count of numbers that meet the first criteria</span>
+
+<span class="c1"># Calculate the mean of the filtered data</span>
+<span class="k">if</span> <span class="n">count</span> <span class="o">&gt;</span> <span class="mi">0</span><span class="p">:</span>
+    <span class="n">filtered_mean</span> <span class="o">=</span> <span class="n">filtered_sum</span> <span class="o">/</span> <span class="n">count</span>
 <span class="k">else</span><span class="p">:</span>
-    <span class="k">raise</span> <span class="ne">Exception</span><span class="p">(</span><span class="s2">&quot;Invalid response data&quot;</span><span class="p">)</span>
+    <span class="n">filtered_mean</span> <span class="o">=</span> <span class="mi">0</span>
 
-<span class="c1"># Display the data in a table format</span>
-<span class="nb">print</span><span class="p">(</span><span class="n">data</span><span class="o">.</span><span class="n">to_markdown</span><span class="p">(</span><span class="n">tablefmt</span><span class="o">=</span><span class="s2">&quot;grid&quot;</span><span class="p">))</span>
+<span class="c1"># Print the mean and the count of numbers that meet the first criteria</span>
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;The mean of the filtered data is </span><span class="si">{</span><span class="n">filtered_mean</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="n">count</span><span class="si">}</span><span class="s2"> numbers meet the first criteria&quot;</span><span class="p">)</span>
 </pre></div>
 
     </div>
@@ -271,16 +258,189 @@ window.onload = wrap_img;
 
 <div class="output_area">
 
-<div class="output_subarea output_text output_error">
-<pre>
-<span class="ansi-red-fg">---------------------------------------------------------------------------</span>
-<span class="ansi-red-fg">ModuleNotFoundError</span>                       Traceback (most recent call last)
-Cell <span class="ansi-green-fg">In[1], line 1</span>
-<span class="ansi-green-fg">----&gt; 1</span> import pandas as pd
-<span class="ansi-green-intense-fg ansi-bold">      2</span> import requests
-<span class="ansi-green-intense-fg ansi-bold">      4</span> url = &#34;https://spoonacular-recipe-food-nutrition-v1.p.rapidapi.com/recipes/complexSearch&#34;
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>The mean of the data is 0.4904628425744203
+The mean of the filtered data is 0
+0 numbers meet the first criteria
+</pre>
+</div>
+</div>
 
-<span class="ansi-red-fg">ModuleNotFoundError</span>: No module named &#39;pandas&#39;</pre>
+</div>
+</div>
+
+</div>
+    
+
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="Logic-Gates">Logic Gates<a class="anchor-link" href="#Logic-Gates"> </a></h2><ol>
+<li><p>Logic gates are used to perform basic Boolean operations such as AND, OR, and NOT, which are the building blocks of more complex digital circuits that form the basis of modern computer functions.</p>
+</li>
+<li><p>Boolean operations refer to the logical operations that can be performed on Boolean values, such as AND, OR, and NOT, while logic gates are physical electronic components that implement these Boolean operations in digital circuits.</p>
+</li>
+<li><p><img src="https://github.com/RyanHaki/APCSPwebPage/blob/master/images/Screenshot 2023-04-28 at 2.49.30 PM.png?raw=true" alt="image" /></p>
+</li>
+</ol>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="Fetching">Fetching<a class="anchor-link" href="#Fetching"> </a></h2>
+</div>
+</div>
+</div>
+    
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">orders</span> <span class="o">=</span> <span class="p">[</span>
+    <span class="p">{</span>
+        <span class="s2">&quot;id&quot;</span><span class="p">:</span> <span class="mi">1</span><span class="p">,</span>
+        <span class="s2">&quot;customerName&quot;</span><span class="p">:</span> <span class="s2">&quot;Alice&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;items&quot;</span><span class="p">:</span> <span class="p">[</span>
+            <span class="p">{</span><span class="s2">&quot;name&quot;</span><span class="p">:</span> <span class="s2">&quot;Widget A&quot;</span><span class="p">,</span> <span class="s2">&quot;price&quot;</span><span class="p">:</span> <span class="mf">12.99</span><span class="p">},</span>
+            <span class="p">{</span><span class="s2">&quot;name&quot;</span><span class="p">:</span> <span class="s2">&quot;Widget B&quot;</span><span class="p">,</span> <span class="s2">&quot;price&quot;</span><span class="p">:</span> <span class="mf">8.99</span><span class="p">},</span>
+            <span class="p">{</span><span class="s2">&quot;name&quot;</span><span class="p">:</span> <span class="s2">&quot;Widget C&quot;</span><span class="p">,</span> <span class="s2">&quot;price&quot;</span><span class="p">:</span> <span class="mf">5.99</span><span class="p">},</span>
+        <span class="p">],</span>
+        <span class="s2">&quot;orderDate&quot;</span><span class="p">:</span> <span class="s2">&quot;2022-04-15&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;total&quot;</span><span class="p">:</span> <span class="mf">27.97</span><span class="p">,</span>
+    <span class="p">},</span>
+    <span class="p">{</span>
+        <span class="s2">&quot;id&quot;</span><span class="p">:</span> <span class="mi">2</span><span class="p">,</span>
+        <span class="s2">&quot;customerName&quot;</span><span class="p">:</span> <span class="s2">&quot;Bob&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;items&quot;</span><span class="p">:</span> <span class="p">[</span>
+            <span class="p">{</span><span class="s2">&quot;name&quot;</span><span class="p">:</span> <span class="s2">&quot;Widget A&quot;</span><span class="p">,</span> <span class="s2">&quot;price&quot;</span><span class="p">:</span> <span class="mf">12.99</span><span class="p">},</span>
+            <span class="p">{</span><span class="s2">&quot;name&quot;</span><span class="p">:</span> <span class="s2">&quot;Widget D&quot;</span><span class="p">,</span> <span class="s2">&quot;price&quot;</span><span class="p">:</span> <span class="mf">9.99</span><span class="p">},</span>
+        <span class="p">],</span>
+        <span class="s2">&quot;orderDate&quot;</span><span class="p">:</span> <span class="s2">&quot;2022-04-16&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;total&quot;</span><span class="p">:</span> <span class="mf">22.98</span><span class="p">,</span>
+    <span class="p">},</span>
+    <span class="p">{</span>
+        <span class="s2">&quot;id&quot;</span><span class="p">:</span> <span class="mi">3</span><span class="p">,</span>
+        <span class="s2">&quot;customerName&quot;</span><span class="p">:</span> <span class="s2">&quot;Charlie&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;items&quot;</span><span class="p">:</span> <span class="p">[</span>
+            <span class="p">{</span><span class="s2">&quot;name&quot;</span><span class="p">:</span> <span class="s2">&quot;Widget C&quot;</span><span class="p">,</span> <span class="s2">&quot;price&quot;</span><span class="p">:</span> <span class="mf">5.99</span><span class="p">},</span>
+            <span class="p">{</span><span class="s2">&quot;name&quot;</span><span class="p">:</span> <span class="s2">&quot;Widget E&quot;</span><span class="p">,</span> <span class="s2">&quot;price&quot;</span><span class="p">:</span> <span class="mf">7.99</span><span class="p">},</span>
+            <span class="p">{</span><span class="s2">&quot;name&quot;</span><span class="p">:</span> <span class="s2">&quot;Widget F&quot;</span><span class="p">,</span> <span class="s2">&quot;price&quot;</span><span class="p">:</span> <span class="mf">10.99</span><span class="p">},</span>
+        <span class="p">],</span>
+        <span class="s2">&quot;orderDate&quot;</span><span class="p">:</span> <span class="s2">&quot;2022-04-18&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;total&quot;</span><span class="p">:</span> <span class="mf">24.97</span><span class="p">,</span>
+    <span class="p">},</span>
+<span class="p">]</span>
+
+<span class="k">def</span> <span class="nf">filter_orders_by_total</span><span class="p">(</span><span class="n">orders</span><span class="p">,</span> <span class="n">min_total</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot;Filters orders by total, only returning orders with a total greater than or equal to min_total.&quot;&quot;&quot;</span>
+    <span class="n">filtered_orders</span> <span class="o">=</span> <span class="p">[]</span>
+    <span class="k">for</span> <span class="n">order</span> <span class="ow">in</span> <span class="n">orders</span><span class="p">:</span>
+        <span class="k">if</span> <span class="n">order</span><span class="p">[</span><span class="s2">&quot;total&quot;</span><span class="p">]</span> <span class="o">&gt;=</span> <span class="n">min_total</span><span class="p">:</span>
+            <span class="n">filtered_orders</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">order</span><span class="p">)</span>
+    <span class="k">return</span> <span class="n">filtered_orders</span>
+
+<span class="n">filtered_orders</span> <span class="o">=</span> <span class="n">filter_orders_by_total</span><span class="p">(</span><span class="n">orders</span><span class="p">,</span> <span class="mf">25.0</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">filtered_orders</span><span class="p">)</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="output_area">
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>[{&#39;id&#39;: 1, &#39;customerName&#39;: &#39;Alice&#39;, &#39;items&#39;: [{&#39;name&#39;: &#39;Widget A&#39;, &#39;price&#39;: 12.99}, {&#39;name&#39;: &#39;Widget B&#39;, &#39;price&#39;: 8.99}, {&#39;name&#39;: &#39;Widget C&#39;, &#39;price&#39;: 5.99}], &#39;orderDate&#39;: &#39;2022-04-15&#39;, &#39;total&#39;: 27.97}]
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
+</div>
+    
+
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="GitHub-Pages">GitHub Pages<a class="anchor-link" href="#GitHub-Pages"> </a></h2>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>One hosting service website that is different from Github Pages is Netlify. One advantage of Netlify is that it provides continuous deployment, which means that your website is automatically built and deployed whenever you push changes to your Git repository. This makes it very easy to iterate quickly and deploy changes frequently, without having to worry about the deployment process. Additionally, Netlify provides a lot of other features such as custom domain support, SSL encryption, and forms handling, making it a great choice for static website hosting.</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="API's">API's<a class="anchor-link" href="#API's"> </a></h2>
+</div>
+</div>
+</div>
+    
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="nn">pd</span>
+
+<span class="n">data</span> <span class="o">=</span> <span class="p">{</span>
+    <span class="s1">&#39;Name&#39;</span><span class="p">:</span> <span class="p">[</span><span class="s1">&#39;Dillon&#39;</span><span class="p">,</span> <span class="s1">&#39;Noor&#39;</span><span class="p">,</span> <span class="s1">&#39;Steven&#39;</span><span class="p">,</span> <span class="s1">&#39;Lucas&#39;</span><span class="p">,</span> <span class="s1">&#39;Harsha&#39;</span><span class="p">,</span> <span class="s1">&#39;Varalu&#39;</span><span class="p">,</span> <span class="s1">&#39;Ryan&#39;</span><span class="p">,</span> <span class="s1">&#39;Emaad&#39;</span><span class="p">],</span>
+    <span class="s1">&#39;Age&#39;</span><span class="p">:</span> <span class="p">[</span><span class="mi">24</span><span class="p">,</span> <span class="mi">31</span><span class="p">,</span> <span class="mi">42</span><span class="p">,</span> <span class="mi">27</span><span class="p">,</span> <span class="mi">29</span><span class="p">,</span> <span class="mi">26</span><span class="p">,</span> <span class="mi">90</span><span class="p">,</span> <span class="mi">15</span><span class="p">],</span>
+    <span class="s1">&#39;Gender&#39;</span><span class="p">:</span> <span class="p">[</span><span class="s1">&#39;M&#39;</span><span class="p">,</span> <span class="s1">&#39;M&#39;</span><span class="p">,</span> <span class="s1">&#39;M&#39;</span><span class="p">,</span> <span class="s1">&#39;M&#39;</span><span class="p">,</span> <span class="s1">&#39;F&#39;</span><span class="p">,</span> <span class="s1">&#39;F&#39;</span><span class="p">,</span> <span class="s1">&#39;F&#39;</span><span class="p">,</span> <span class="s1">&#39;F&#39;</span><span class="p">],</span>
+    <span class="s1">&#39;Grade&#39;</span><span class="p">:</span> <span class="p">[</span><span class="s1">&#39;A&#39;</span><span class="p">,</span> <span class="s1">&#39;B&#39;</span><span class="p">,</span> <span class="s1">&#39;A&#39;</span><span class="p">,</span> <span class="s1">&#39;D&#39;</span><span class="p">,</span> <span class="s1">&#39;C&#39;</span><span class="p">,</span> <span class="s1">&#39;F&#39;</span><span class="p">,</span> <span class="s1">&#39;B&#39;</span><span class="p">,</span> <span class="s1">&#39;A&#39;</span><span class="p">]</span>
+<span class="p">}</span>
+
+<span class="n">df</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">(</span><span class="n">data</span><span class="p">)</span>
+
+<span class="c1"># 1. Use the describe function to get summary statistics for the numeric columns</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">df</span><span class="o">.</span><span class="n">describe</span><span class="p">())</span>
+
+<span class="c1"># 2. Use the value_counts function to get the count of each gender</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">df</span><span class="p">[</span><span class="s1">&#39;Gender&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">value_counts</span><span class="p">())</span>
+
+<span class="c1"># 3. Use the groupby function to get the mean age by gender</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">df</span><span class="o">.</span><span class="n">groupby</span><span class="p">(</span><span class="s1">&#39;Gender&#39;</span><span class="p">)[</span><span class="s1">&#39;Age&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">mean</span><span class="p">())</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="output_area">
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>             Age
+count   8.000000
+mean   35.500000
+std    23.268618
+min    15.000000
+25%    25.500000
+50%    28.000000
+75%    33.750000
+max    90.000000
+M    4
+F    4
+Name: Gender, dtype: int64
+Gender
+F    40.0
+M    31.0
+Name: Age, dtype: float64
+</pre>
 </div>
 </div>
 
